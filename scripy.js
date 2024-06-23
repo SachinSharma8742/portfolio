@@ -93,9 +93,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
 async function saveDataToGitHub(data) {
     const accessToken = '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'; // Replace with your GitHub access token
-    const repoOwner = 'YOUR_GITHUB_USERNAME';
-    const repoName = 'YOUR_REPO_NAME';
-    const filePath = 'data/form_data.json'; // Path to your JSON file in the repository
+    const repoOwner = 'SachinSharma8742';
+    const repoName = 'E-mail';
+    const filePath = 'form_data.json'; // Path to your JSON file in the repository
 
     const commitMessage = 'Add form submission data';
 
