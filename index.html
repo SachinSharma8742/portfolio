@@ -7,6 +7,7 @@
     <meta property="og:title" content="Sachin Sharma portfolio">
     <meta property="og:type" content="Website">
     <link rel="stylesheet" href="style2.css">
+    <script src="time.js" defer></script>
     <title>Portfolio</title>
 </head>
 <style>
@@ -15,9 +16,13 @@
     }
 </style>
 <body>
+    
     <header>
         <img width="216" height="216" src="Screenshot_2024-06-09_at_10.23.36_AM-transformed.png" class="profile">
-        <h1 class="name"><span>Sachin</span> Sharma</h1>
+        <div class="name">
+        <span class="actual-text">&nbsp;<strong>Sachin</strong>Sharma&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;Sachin Sharma &nbsp;</span>
+        </div>
         <nav>
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
@@ -26,17 +31,134 @@
             <span></span>
         </nav>
     </header>
+    <div class="eyecontainer">
+    <div class="eye cool-button"  title="Goes to About"><video src="eye.mov" loop autoplay="autoplay" muted alt="video not found" ></video></div>
+    <div class="eye cool-button" title="Goes to Contact"><video src="eye.mov" loop autoplay="autoplay" muted alt="video not found"></video></div>  
+    </div>
     <div class="black-box">
         <div class="text">
-          <h1 class="logo-name"><span style="color: gray;">Hello There!</span> </h1>
-          <br>
+          <h1 class="logo-name"><span style="color: gray; ">Hello There!</span> </h1>
           <br>
           <h2><span style="color: gray;">I'm a </span><span id="typewriter" class="typewriter"></span></h2>       
         </div>
         <img src="d-unscreen.gif" alt="Just Me Coding">
-      </div>
-      <a href="about.html" class="eye cool-button"  title="Goes to About"><span>About_me</span></a>
-      <a href="contact.html" class="eye cool-button" title="Goes to Contact"><span>Contact</span></a>
+    </div>  
+      <br>
+      <br>
+      <hr>
+      <br>
+      <h1 style="color: aliceblue; text-align: center;">INTERNSHIPS</h1>
+      <div class="cardcontainer">
+        <div class="cardm1">
+            <div class="card">
+              <svg class="weather" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" xml:space="preserve">  <image id="image0" width="100" height="100" x="0" y="0" href="data:image/png;base64,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"></image>
+              </svg>
+              <div class="main">Intershala</div>
+              <div class="mainsub" style="padding-left:5px">Student Partner</div>
+          
+            </div>
+          
+            <div class="card2">
+              <div class="upper">
+                <div class="humidity">
+                  <div class="aqitext">Start<br>26/06/24</div>
+                </div>
+          
+                <div class="air">
+                <div class="aqitext">End<br>7/08/24</div>
+                </div>
+                <div class="countdown-el days-c" id="days-text">
+                      <span>Days Left</span>
+                      <p class="big-text" id="days1">0</p>
+                  </div>
+              </div>
+          
+              <div class="lower">
+                <div class="aqi">
+                  <svg class="aqisvg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" xml:space="preserve">  <image id="image0" width="20" height="20" x="0" y="0" 
+                    href="https://cdn-icons-png.flaticon.com/256/5956/5956592.png"></image>
+                  </svg>
+                  <div class="aqitext">Peojects<br>2</div>
+                </div>
+          
+                <div class="realfeel">
+                  <svg class="rfsvg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" xml:space="preserve">  <image id="image0" width="20" height="20" x="0" y="0"
+                    href="https://toppng.com/uploads/preview/lighthouse-experience-icon-experience-icon-11553444674upcv3lx9aw.png"></image>
+                  </svg>
+                  <div class="realfeeltext">Experience<br>1 M</div>
+                  
+                </div>
+          
+                <div class="pressure">
+                  <svg class="pressuresvg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" xml:space="preserve">  <image id="image0" width="20" height="20" x="0" y="0" 
+                    href="https://cdn-icons-png.flaticon.com/512/3000/3000745.png"></image>
+                  </svg>
+                  <div class="realfeeltext">Certificate<br>1</div>
+                </div>
+                <div id="status1" class="card3">
+                In Progress
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="cardm2">
+            <div class="card">
+              <svg class="weather" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" xml:space="preserve">  <image id="image0" width="100" height="100" x="0" y="0" href="https://unifiedmentor.podia.com/content-assets/public/x3kyxehqblxffoz56m5l3cu3l7y8"></image>
+              </svg>
+              <div class="main">Unified Mentor</div>
+              <div class="mainsub" style="padding-left:5px">Web Devlop Intern</div>
+          
+            </div>
+          
+            <div class="card2">
+              <div class="upper">
+                <div class="humidity">
+                  <div class="aqitext">Start<br>25/06/24</div>
+                </div>
+          
+                <div class="air">
+                <div class="aqitext">End<br>25/07/24</div>
+                </div>
+                <div class="countdown-el days-c" id="days-text">
+                      <span>Days Left</span>
+                      <p class="big-text" id="days2">0</p>
+                  </div>
+              </div>
+          
+              <div class="lower">
+                <div class="aqi">
+                  <svg class="aqisvg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" xml:space="preserve">  <image id="image0" width="20" height="20" x="0" y="0" 
+                    href="https://cdn-icons-png.flaticon.com/256/5956/5956592.png"></image>
+                  </svg>
+                  <div class="aqitext">Peojects<br>2</div>
+                </div>
+          
+                <div class="realfeel">
+                  <svg class="rfsvg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" xml:space="preserve">  <image id="image0" width="20" height="20" x="0" y="0"
+                    href="https://toppng.com/uploads/preview/lighthouse-experience-icon-experience-icon-11553444674upcv3lx9aw.png"></image>
+                  </svg>
+                  <div class="realfeeltext">Experience<br>1 M</div>
+                  
+                </div>
+          
+                <div class="pressure">
+                  <svg class="pressuresvg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" xml:space="preserve">  <image id="image0" width="20" height="20" x="0" y="0" 
+                    href="https://cdn-icons-png.flaticon.com/512/3000/3000745.png"></image>
+                  </svg>
+                  <div class="realfeeltext">Certificate<br>1</div>
+                </div>
+                <div id="status2" class="card3">
+                In Progress
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+<br>
+<br>
+<br>
+<br>
     <script src="scripy.js"></script>
 </body>
 </html>
