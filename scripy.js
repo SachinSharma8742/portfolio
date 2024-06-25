@@ -95,7 +95,7 @@ async function saveDataToGitHub(data) {
     const accessToken = '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'; // Replace with your GitHub access token
     const repoOwner = 'SachinSharma8742';
     const repoName = 'E-mail';
-    const filePath = 'form_data.json'; // Path to your JSON file in the repository
+    const filePath = 'data/form_data.json'; // Path to your JSON file in the repository
 
     const commitMessage = 'Add form submission data';
 
@@ -131,3 +131,4 @@ async function saveDataToGitHub(data) {
     .then(data => console.log('Data saved to GitHub:', data))
     .catch(error => console.error('Error saving data to GitHub:', error));
 }
+
