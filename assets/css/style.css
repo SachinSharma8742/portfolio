@@ -947,7 +947,7 @@ strong{
   -webkit-filter: invert(80) sepia(90) ;
           filter: invert(80) sepia(90) ;
   height: 3em;
-  
+  transition: all .3s ease-in-out;
 }
 
 .skills span {
@@ -980,20 +980,29 @@ strong{
   }
 }
 
-
-.skills:hover span ,.skills:active span{
-    margin-top: 5px;
-    font-size: small;
-    display: block;   
-    text-align: center; 
+@media (min-width: 769px) {
+  .skills:hover span,.skills:active span{
+  margin-top: 5px;
+  font-size: small;
+  display: block;   
+  text-align: center; 
 }
-
+}
+@media (max-width: 768px) {
+.skills.touch-active span {
+  margin-top: 5px;
+  font-size: small;
+  display: block;   
+  text-align: center; 
+}
+}
 .cs{
   color: #ffffff;
 }
 .green:hover , .green:active {
   -webkit-animation: growShadowGreen .5s forwards;
           animation: growShadowGreen .5s forwards;
+          
 }
 
 .yellow:hover,.yellow:active {
@@ -1014,7 +1023,8 @@ strong{
               box-shadow: 
           0 0 10px rgba(0, 255, 0, 0.1),  /* Outer shadow */
           inset 0 0 5px rgba(0, 255, 0, 0.2);  /* Inner shadow */
-  }
+          
+        }
   100% {
       -webkit-box-shadow: 
           0 0 30px rgba(0, 255, 0, 0.5),  /* Outer shadow */
@@ -1511,6 +1521,20 @@ top: 20.2em;
     }
   .card, .card2 {
     width: 18rem;
+  }
+
+  .card.touch-active {
+    background-color: #FFE87C;
+  }
+
+  .card.touch-active + .card2{
+  height: 300px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  }
+
+  .card.touch-active + .card2 .lower {
+  top: 20.2em;
   }
 
   .main-text{
