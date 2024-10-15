@@ -1353,19 +1353,35 @@ strong{
   transition: .4s ease-in-out;
 }
 
-.card:hover,.card:active {
-  background-color: #FFE87C;
-  cursor: pointer;
+@media (min-width: 769px) {
+  .card:hover,.card:active {
+background-color: #FFE87C;
+cursor: pointer;
 }
 
 .card:hover + .card2,.card:active + .card2 {
-  height: 300px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+height: 300px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
 }
 
 .card:hover + .card2 .lower,.card:active + .card2 .lower  {
-  top: 20.2em;
+top: 20.2em;
+}
+}
+@media (max-width: 768px) {
+  .card.touch-active {
+    background-color: #FFE87C;
+  }
+.card.touch-active + .card2{
+height: 300px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+}
+
+.card.touch-active + .card2 .lower {
+top: 20.2em;
+}
 }
 
 .upper {
