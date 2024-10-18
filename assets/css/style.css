@@ -444,6 +444,23 @@ main {
   padding: 3px 12px;
   border-radius: 8px;
   min-height: 2.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+.info-content .title span{
+  color: white;
+  animation: caret 0.75s step-end infinite;
+  text-shadow:1px 1px 1px gray;
+  display: inline-block;
+}
+
+@keyframes caret {
+  50% {
+      opacity: 0;
+  }
 }
 
 .info_more-btn {
@@ -1490,6 +1507,7 @@ a > button:hover .icon-3 {
   .card:hover,.card:active {
 background-color: #FFE87C;
 cursor: pointer;
+transform: scale(1.1);
 }
 
 .card:hover + .card2,.card:active + .card2 {
@@ -1505,6 +1523,7 @@ top: 20.2em;
 @media (max-width: 768px) {
   .card.touch-active {
     background-color: #FFE87C;
+    transform: scale(1.1);
   }
 .card.touch-active + .card2{
 height: 300px;
@@ -3238,11 +3257,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-size: 17px;
   font-weight: 500;
   color: var(--orange-yellow-crayola);
-  
   border-radius: 8px;
   box-shadow: 0 0 0 var(--orange-yellow-crayola);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+ 
 }
 
 .star-1 {
@@ -3315,7 +3334,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   background: transparent;
   color: var(--orange-yellow-crayola);
   box-shadow: 0 0 25px var(--orange-yellow-crayola);
-  border: 3px solid var(--orange-yellow-crayola);
+  outline: 3px solid var(--orange-yellow-crayola);
+ 
 }
 
 .contact-form button:hover .star-1 {
