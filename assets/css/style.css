@@ -2687,15 +2687,14 @@ background-color: transparent;
           align-items: center;
   text-align: center;
   padding: 10px;
-  -webkit-box-shadow: 0 0 0 1px var(--orange-yellow-crayola);
-          box-shadow: 0 0 0 1px var(--orange-yellow-crayola);
-  border-radius: 4px;
+  border-radius: 8px;
   -webkit-transition: -webkit-box-shadow 0.3s ease;
   transition: -webkit-box-shadow 0.3s ease;
   -o-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
   height: 119px;
+
   
 }
 
