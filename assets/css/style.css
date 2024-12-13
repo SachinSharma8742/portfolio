@@ -1062,7 +1062,7 @@ a > button:hover .icon-3 {
 
 .skills{
   background: var(--orange-yellow-crayola);
-  padding: 1rem;
+  padding: 0 1rem 0 1rem ;
   border-radius: 8px;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1086,7 +1086,7 @@ a > button:hover .icon-3 {
 .skills img{
   -webkit-filter: invert(80) sepia(90) ;
           filter: invert(80) sepia(90) ;
-  height: 3em;
+  height: 3rem;
   transition: all .3s ease-in-out;
 }
 
@@ -1124,10 +1124,14 @@ a > button:hover .icon-3 {
   .skills:hover span,.skills:active span{
   margin-top: 5px;
   font-size: small;
-  display: block;   
+  display: block; 
   text-align: center; 
+ } 
+  
+  
 }
-}
+
+
 @media (max-width: 768px) {
 .skills.touch-active span {
   margin-top: 5px;
@@ -1135,7 +1139,10 @@ a > button:hover .icon-3 {
   display: block;   
   text-align: center; 
 }
+
 }
+
+
 .cs{
   color: #ffffff;
 }
@@ -4351,3 +4358,4 @@ textarea.form-input::-webkit-resizer { display: none; }
   
 
 }
+
