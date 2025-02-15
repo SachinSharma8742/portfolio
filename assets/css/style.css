@@ -3846,8 +3846,8 @@ textarea.form-input::-webkit-resizer { display: none; }
             align-items: center;
     gap: 25px;
     padding-left: 5px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   .filter-item button {
@@ -4007,7 +4007,10 @@ textarea.form-input::-webkit-resizer { display: none; }
    * PORTFOLIO
    */
 
-  .project-list { -ms-grid-columns: (1fr)[3]; grid-template-columns: repeat(3, 1fr); }
+  .project-list { 
+    -ms-grid-columns: (1fr)[3]; 
+    grid-template-columns: repeat(3, 1fr); 
+  }
 
 
 
