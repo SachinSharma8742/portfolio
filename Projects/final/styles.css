@@ -1,0 +1,895 @@
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.bounce1,.bounce2,.bounce3 {
+  width: 40px;
+  height: 40px;
+  background-color: #00ffea;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.bounce2 {
+  animation-delay: -1s;
+  background-color: #ffbf00;
+
+
+}
+
+.bounce3 {
+  animation-delay: -2s;
+  background-color: #ffffff;
+
+  
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  } 40% {
+    transform: scale(1);
+  }
+}
+
+
+.top-container{
+  position: absolute;
+}
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Set the background color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffcc00; /* Set the color of the scrollbar handle */
+  border-radius: 20px; /* Set the border radius to create a pill shape */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(29, 219, 219, 0.5); /* Change the color of the scrollbar handle on hover */
+}
+
+.parallax {
+  width: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+          perspective: 1px;
+  margin: 0;
+  padding: 0;
+  background-image: url('Image/layer4.jpeg');
+  position: relative;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+}
+
+.parallax-layer {
+  position: absolute;
+  background-image: url('Image/layer4.jpeg');
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
+  margin-top: 0; 
+}
+
+.layer1{
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url('Image/layer1.jpeg');
+
+  background-size: cover;
+  -webkit-transform: translateZ(-1px) scale(1px);
+          transform: translateZ(-1px) scale(1px);
+  z-index: -1;
+  min-width: 100%;
+}
+
+.layer2 {
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url('Image/layer2.jpg');
+  
+  background-size: cover;
+  -webkit-transform: translateZ(-1.6px) scale(3.7);
+          transform: translateZ(-1.6px) scale(3.7);
+  z-index: -2;
+
+}
+
+.layer3 {
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url('Image/layer3.jpg');
+  background-size: cover;
+  -webkit-transform: translateZ(-3px) scale(7);
+          transform: translateZ(-3px) scale(7);
+  z-index: -3;
+  padding-top: 5%;
+}
+
+.layer4 {
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color:rgb(0, 0, 0);
+  background-image: url('Image/layer4.jpeg');
+  background-size: cover;
+  -webkit-transform: translateZ(-4px) scale(9);
+          transform: translateZ(-4px) scale(9);
+  z-index: -4;
+}
+.layer-1-layout{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.black-box {
+  position: relative;
+  background-color: black;
+  color: white;
+  padding: 20px; /* Remove one of the padding declarations */
+ 
+  display: -webkit-box;
+ 
+  display: -ms-flexbox;
+ 
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 55%;
+  max-width: 1200px;
+  height: 49%;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 90%;
+  left: 3%;
+}
+.text {
+  position: relative;
+  background-color: orange;
+  height: auto;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 50%;
+  left: 8%;
+}
+
+#video-container {
+  position: absolute;
+  width: 130% ;
+  height: 130% ;
+  left: 20%;
+  margin-right: 100px;
+  top: -80px;
+  
+  
+ 
+  
+}
+.video{
+  position: relative;
+  height: auto;
+  width: auto;
+  border-radius: 80px;
+}
+.entry,
+.loop {
+  position: relative;
+  top: 0;
+  left: 40%;
+  margin-left: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.cool-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  
+}
+
+.cool-button-green {
+  background-color: #04f831;
+  -webkit-animation: heartbeat 1.5s infinite;
+          animation: heartbeat 1.5s infinite;
+  color: #000000;
+  
+}
+
+.cool-button-red{
+  background-color: #00ffee;
+  -webkit-animation: heartbeat 1.5s infinite;
+  animation: heartbeat 1.5s infinite;
+ 
+}
+
+.cool-button-green:hover {
+  background-color: #ffffff78;
+}
+
+.cool-button-red:hover {
+  background-color: #ffffff97;
+}
+
+.First-text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(102, 93, 93, 0.7); 
+  border-top-left-radius: 20px;
+  position: relative;
+  padding: 10px 20px;
+  -webkit-box-shadow: 2px 2px 10px rgba(29, 219, 219, 0.5);
+          box-shadow: 2px 2px 10px rgba(29, 219, 219, 0.5);
+  
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  color: aliceblue;
+}
+.layer-2-layout{
+  position: relative;
+  top: 90%;
+  right: 5%;
+  height: auto;
+  justify-self: center;
+  align-items: center;
+}
+.first-bottom-text {
+  position: relative;
+  background-color: rgb(255, 0, 0);
+  margin-top: 100px; /* Add a space between the value and unit */
+  border-radius: 80px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 320px;
+  width: 25%;
+  margin-top: 20%;
+  left: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 3px 10px rgba(29, 219, 219, 0.5);
+          box-shadow: 3px 3px 10px rgba(29, 219, 219, 0.5);
+  padding: 20px 30px;
+  color: aliceblue;
+  border: 2px solid #000; 
+}
+
+.first-bottom-second{/*not in use*/
+  position: relative;
+  background-color: orange;
+  margin-top: 30px; 
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 270px;
+  width: 480px;
+  left: 71%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 3px 10px rgba(29, 219, 219, 0.5);
+          box-shadow: 3px 3px 10px rgba(29, 219, 219, 0.5);
+  color: aliceblue;
+  /* animation: heartbeat 1.5s infinite; */
+}
+.video-container-game{
+  position: relative;
+  max-width: 100%; /* Set max-width to 100% */
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: none; /* Initially hide the video container */
+}
+.video-game{
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%; /* Set max-width to 100% */
+  max-height: 100%;
+  border-radius: 20px;
+}
+
+.text-box {
+  margin-bottom: 20px;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-left: 110px;
+  padding-top: 20px;
+  -webkit-animation: blink 5s infinite;
+          animation: blink 5s infinite;
+}
+.small-box{
+  position: relative;
+  width: 120px; 
+  height: 120px;
+  margin-left: 30px;
+  top: 100px; 
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 3px 7px rgba(255, 255, 255, 0.5);
+          box-shadow: 3px 3px 7px rgba(255, 255, 255, 0.5);
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.small-box img{
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%; /* Set max-width to 100% */
+  max-height: 100%;
+  display: block; 
+  border-radius: 20px;  
+  cursor: pointer;
+}
+
+/* Add hover effect to small-box */
+.small-box:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); /* Increase size by 10% on hover */
+}
+
+/* Add hover effect to small-box img */
+.small-box img:hover {
+  opacity: 0.7; /* Reduce opacity to 70% on hover */
+}
+@-webkit-keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes heartbeat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  
+}
+
+@-webkit-keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.typewriter {
+  font-size: 1.2em;
+  white-space: pre-wrap; /* Preserves spaces and line breaks */
+  overflow: hidden; /* Ensures the text is not shown outside its container */
+  border-right: .15em solid orange; /* Creates the typewriter cursor */
+  -webkit-animation: typewriter 2s steps(100);
+          animation: typewriter 2s steps(100); /* Adjust the duration and steps as needed */}
+  .video-content {
+    margin-top: 6%;
+    right: 6%;
+    .video-content {
+      width: 530px; /* Set the width of the container */
+      height: 400px;
+      right: 30px;
+     
+      margin: 30px auto; /* Center the container horizontally and add margin on top */
+      padding: 10px 20px; /* Add padding inside the container */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; /* Center the content horizontally */
+      background: rgba(225, 18, 18, 0.7); /* Background color with transparency */
+      -webkit-backdrop-filter: blur(10px);
+              backdrop-filter: blur(10px); /* Apply backdrop blur effect */
+      border-radius: 20px; /* Rounded corners */
+      -webkit-box-shadow: 2px 2px 10px rgba(29, 219, 219, 0.5);
+              box-shadow: 2px 2px 10px rgba(29, 219, 219, 0.5); /* Add box shadow for depth */
+      color: aliceblue; /* Text color */
+      position: relative; /* Set position relative for absolute positioning */
+    }
+    }
+    * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    margin-top: 110px;
+    margin-bottom: 100px;
+    max-width: 170px;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 70%;
+    padding: 20px;
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.866), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.866), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background-color: rgba(4, 4, 4, 0);
+    border-radius: 100px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 100;
+}
+
+
+.menu {
+    list-style: none;
+   
+}
+
+.menu li {
+    padding: 7px;
+    height: 50px;
+    width: inherit;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    -webkit-transition: margin-left 0.2s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+    -o-transition: margin-left 0.2s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+    transition: margin-left 0.2s ease-in-out, width 1s ease-in-out, height 1s ease-in-out; /* Combine transition properties */
+}
+
+.menu li:hover {
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3); /* Scale the element */
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+nav li a:hover{
+    color: rgb(0, 0, 0);
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3); /* Scale the element */
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Add transition for smooth animation */
+}    
+.layer-3-layout{
+  position: relative;
+  margin-top: 185%;
+  justify-self: center;
+  align-items: center;
+  
+ 
+}
+.layer-4-layout{
+  position: relative;
+  margin-top: 442%;
+  justify-self: center;
+  align-items: center;
+}
+
+.First-text-news1{
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 20px;
+ 
+  padding: 10px 20px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5); 
+  margin-top: 29%;
+  margin-left: 27%;
+  position: absolute;
+  color: aliceblue;
+  font-size: xx-small;
+  background: url('https://source.unsplash.com/random/1900x800/?video_games');
+  z-index: 400;
+ 
+}
+
+.table{
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(102, 93, 93, 0.7); 
+  border-radius: 3px;
+  position: relative;
+  padding: 10px 20px;
+  top: 600px;
+  margin-left: 340px;
+  color: aliceblue;
+  font-size: xx-small;
+  background: rgba(81, 80, 80, 0.7);
+  margin-left: 27%;
+
+}
+@-webkit-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Apply animations to live status dots */
+.live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.green-dot {
+  background-color: green;
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+}
+
+.gray-dot {
+  background-color: gray;
+}
+
+/* Adjust table width and cell alignment */
+table {
+  width: 100%; /* Set the width to 100% of its container */
+  border-collapse: collapse; /* Collapse table borders */
+}
+
+th, td {
+  text-align: left; /* Align text to the left */
+  padding: 8px; /* Add padding to cells */
+  border-bottom: 1px solid #000000; /* Add bottom border to cells */
+  
+}
+
+th {
+  background-color: #3e3c3c; /* Background color for table headers */
+}
+
+tr:hover {
+  background-color: #f5f5f5; /* Hover color for table rows */
+}
+.news-update{
+  -webkit-animation: heartbeat 1.5s infinite;
+          animation: heartbeat 1.5s infinite;
+  top:50%;
+  margin-left: 42%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(0, 208, 255, 0.85);
+  z-index: 500;
+  }
+  
+.page-home-box{
+ 
+  height: auto;
+  width: auto;
+  padding: 10px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+.page-about-box{
+  
+  height: auto;
+  width: auto;
+  padding: 10px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+.page-services-box{
+  
+  height: auto;
+  width: auto;
+  padding: 10px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+.page-contact-box{
+
+  height: auto;
+  width: auto;
+  padding: 10px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+.page-home-box:hover,.page-about-box:hover,.page-services-box:hover,.page-contact-box:hover{
+  background-color: orange;
+}
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 75vh;
+
+  top:100px;
+  
+}
+
+.button {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #838383;
+  border-radius: 50%;
+  margin: 0 10px;
+  overflow: hidden;
+  -webkit-transition: width 0.5s, height 0.5s;
+  -o-transition: width 0.5s, height 0.5s;
+  transition: width 0.5s, height 0.5s;
+  top: -150px;
+}
+.button:hover {
+  width: 150px;
+  height: 150px;
+}
+
+.button img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  -webkit-transition: width 0.5s, height 0.5s;
+  -o-transition: width 0.5s, height 0.5s;
+  transition: width 0.5s, height 0.5s;
+}
+.button:hover img {
+  width: 100px;
+  height: 100px;
+}
+.blend{mix-blend-mode:multiply ;}
+    
+
+.button-linkedin-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: gray;
+  height: 200px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+
+.button-heading {
+  position: relative;
+  margin-top: 8%;
+  row-gap: 20px;
+}
+.button-linkedin {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid rgb(250, 250, 250);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  top: 10px;
+}
+
+.button-linkedin img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.button-linkedin:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  margin-bottom: 40px ;
+}
+
+.button-heading h3 {
+  margin: 5px 0;
+}
+
+.post-name {
+  display: inline;
+  text-align: center;
+  width: 20%;
+  margin-top: 5px;
+ -webkit-box-pack: center;
+     -ms-flex-pack: center;
+         justify-content: center;
+  
+     
+        
+}
+
+/* ------------------------------------------------- */

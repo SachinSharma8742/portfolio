@@ -1,0 +1,24 @@
+[
+    {
+      "title": "New Game Release: Journey to the Stars",
+      "date": "2024-04-14",
+      "excerpt": "Embark on an epic adventure across the galaxy in our latest game release, Journey to the Stars. Explore alien worlds, encounter strange creatures, and unravel the mysteries of the cosmos. Join us and experience a journey like no other!",
+      "url": "/news/new-game-release-journey-to-the-stars.html",
+      "animation": "fade-in"
+    },
+    {
+      "title": "Community Event: SpaceCon 2024",
+      "date": "2024-04-10",
+      "excerpt": "Join us at SpaceCon 2024 for a celebration of all things space-themed! Meet fellow gamers, participate in tournaments, and get exclusive sneak peeks at upcoming projects. Don't miss out on this out-of-this-world experience!",
+      "url": "/news/community-event-spacecon-2024.html",
+      "animation": "slide-in"
+    },
+    {
+      "title": "Patch Update 1.1.0 Now Live",
+      "date": "2024-04-05",
+      "excerpt": "We've just released Patch Update 1.1.0, featuring bug fixes, performance improvements, and new content. Check out the patch notes for all the details. Get ready to dive back into the action with exciting new features!",
+      "url": "/news/patch-update-1-1-0-now-live.html",
+      "animation": "zoom-in"
+    }
+  ]
+  

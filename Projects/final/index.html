@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wdth,wght@0,75,100..900;1,75,100..900&family=Bungee+Spice&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <title>main</title>
+  <style>
+  h1 {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+h2,h3{
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 75;
+}
+pre{
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+a{
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;  
+}
+</style>
+</head> 
+<body>
+<!-- Preloader -->
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+</div>
+
+<!-- Your content here -->
+
+<!-- Your content here -->
+<div class="desktop-display">
+  <header class="top-container">
+    <div class="menu">
+            <li><a href="#home" class="page-home-box">Home</a></li>
+            <li><a href="#about" class="page-about-box">Games</a></li>
+            <li><a href="#services" class="page-services-box">Services</a></li>
+            <li><a href="#contact" class="page-contact-box">Contact</a></li>
+
+    </div>
+</header>
+    <div class="parallax">
+      <div class="parallax-layer layer1">
+        
+    
+        <div class="First-text">
+          <h2><u>About us</u>  :-</h2>
+          <pre>
+
+
+            In the dynamic world of competitive gaming, where virtual battles 
+            are waged and champions rise, Felo Esports stands at the forefront as 
+            a premier gaming esports company. With a passion for gaming deeply rooted 
+            in our DNA, we have carved our niche in the digital arena, where strategy, 
+            skill, and teamwork converge to create a thrilling 
+            spectator sport.
+          </pre>
+        </div>
+      </div>
+      <div class="parallax-layer layer2"></div>
+      <div class="parallax-layer layer3">  
+        <h1 class="news-update">News and Updates</h1>
+         <ul id="news-list" class="First-text-news1">
+            
+            <!-- News articles will be dynamically added here -->
+          </ul>
+
+      <div class="table"><table>
+        <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>Date</th>
+            <th>Tournament Name</th>
+            <th>Live</th> <!-- New column for live status -->
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Enter details directly in the table -->
+          <tr class="fade-in">
+            <td>1</td>
+            <td>2024-04-14</td>
+            <td>New Game Release: Journey to the Stars</td>
+            <td><span class="live-dot green-dot"></span></td> <!-- Green blinking dot for live status -->
+          </tr>
+          <tr class="slide-in">
+            <td>2</td>
+            <td>2024-04-10</td>
+            <td>Community Event: SpaceCon 2024</td>
+            <td><span class="live-dot gray-dot"></span></td> <!-- Gray dot for non-live status -->
+          </tr>
+          <tr class="zoom-in">
+            <td>3</td>
+            <td>2024-04-05</td>
+            <td>Patch Update 1.1.0 Now Live</td>
+            <td><span class="live-dot green-dot"></span></td> 
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table></div>
+        
+      </div>
+      <div class="parallax-layer layer4"></div>
+      <section id="home" class="page-home layer-1-layout">
+      
+      <div class="black-box">
+        <div class="text">
+          <br>
+          <h1 class="logo-name">Felo Esports</h1>
+          <br>
+          <br>
+          <h2>R C D</h2>
+        
+          <pre>(Rise Conqueror and Dominate)</pre>
+        
+          <div class="entry-video">
+            <div id="video-container">
+              <video class="video entry" id="entry" autoplay="autoplay" muted alt="video not found" onended="playLoop()" style="display: block;">
+                <source src="Video/entry.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <video class="video loop" id="loop" loop muted alt="video not found" style="display: none;">
+                <source src="Video/loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+      
+        <section  class="layer-2-layout page-about" id="about" class="">
+          
+        <div class="first-bottom-text">
+          <div class="text-box "><h1><b>Games</b></h1></div>
+          <!-- First smaller box -->
+          <div class="small-box" onclick="playVideo('video1')">
+            <img src="Image/image1.jpg" alt="Image 1" loading="lazy">
+          </div>
+          <!-- Second smaller box -->
+          <div class="small-box" onclick="playVideo('video2')">
+            <img src="Image/image2.jpg" alt="Image 2" loading="lazy">
+          </div>
+        </div>
+        <div class="first-bottom-second">
+          <div class="video-container-game" id="video1">
+            <video class="video-game" autoplay="autoplay" muted loop>
+              <source src="Video/bgmi.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-content"><br><h1>BGMI</h1><hr><pre class="typewriter">
+              BGMI, or Battlegrounds Mobile India, is a popular online multiplayer battle royale game for the Indian market by Krafton. It allows players to compete in intense solo, duo, or squad matches on different maps. BGMI includes cultural elements and language options that resonate with Indian gamers. Despite past regulatory issues, the game remains a favorite among mobile gamers in India due to its engaging and competitive gameplay.</pre>
+              <br>
+              <a href="https://www.cognitoforms.com/FeloEsports/BGMITORNAMENTREGISTRATION" class="cool-button cool-button-green" target="_blank" title="Goes to congrnito">Join now</a>
+              <br>
+              <br>
+              <h3><u>BGMI Leader Board</u></h3>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Team</th>
+                    <th>Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Team 1</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Team 2</td>
+                    <td>950</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Team 3</td>
+                    <td>850</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+          </div>
+          <div class="video-container-game" id="video2">
+            <video class="video-game" autoplay="autoplay" muted loop>
+              <source src="Video/valvo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-content" ><br><h1>Valo</h1><hr><pre class="typewriter">
+              Valorant, known as VALO, is a popular tactical first-person shooter from Riot Games. It combines precise gunplay with unique character abilities in strategic 5v5 matches that emphasize teamwork and communication. The game focuses on attack and defense scenarios, with teams completing objectives. VALO's fast-paced, competitive gameplay has led to a strong esports scene and attracts players with regular updates and events.</pre>
+              <br>
+              <a href="https://www.cognitoforms.com/FeloEsports/VALORANTTOURNAMENTREGISTRATION" class="cool-button cool-button-red" target="_blank" title="Goes to congrnito">Join now</a>
+              <br>
+              <br>
+              <h3><u>Valo Leader Board</u></h3>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Player 1</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Player 2</td>
+                    <td>950</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Player 3</td>
+                    <td>850</td>
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+              </div>
+          </div>
+        </div>
+      </section>
+      
+       <section id="services" class="page-services layer-3-layout">
+        </section>
+      
+
+     
+      
+        <section id="contact" class="page-contact layer-4-layout">
+        
+        <div class="button-container">
+          <a href="https://www.youtube.com/@FELO_ESPORTS/" target="_blank" class="button">
+            <img src="Image/youtube-logo-removebg-preview.png" alt="YouTube" loading="lazy">
+          </a>
+          <a href="https://www.instagram.com/felo_esports/" target="_blank" class="button">
+            <img src="Image/instagram-logo-removebg-preview.png" alt="Instagram" loading="lazy">
+          </a>
+          <a href="https://discord.gg/gJQRABjY" target="_blank" class="button">
+            <img src="Image/discord-logo-removebg-preview.png" alt="Discord" loading="lazy">
+          </a>
+          <a href="https://chat.whatsapp.com/BsWzYOB54emBBJu85C6ORt" target="_blank" class="button">
+            <img src="Image/whatsapp-logo-removebg-preview.png" alt="whatsapp" loading="lazy">
+          </a>
+        </div>
+        <div class="button-linkedin-container">
+          <!-- Button 1 -->
+          <div class="post-name">
+          <a href="https://www.linkedin.com/in/nitin-repswal-a6648828a/" target="_blank" class="button-linkedin">
+            <img src="https://media.licdn.com/dms/image/D5603AQFuiVgiaXNCfg/profile-displayphoto-shrink_400_400/0/1710946417711?e=1718841600&v=beta&t=ecfQ4s47B2kOAjWVfda_hRlDXUsb0Oq7YVgs-Og8oPk" alt="LinkedIn Profile Picture">
+          </a>
+          <div class="button-heading">
+            <h2><u>Founder</u></h2>
+            <h5>Nitin Repswal</h5>
+            </div>
+          </div>
+          <!-- Button 2 -->
+          <div class="post-name">
+          <a href="https://www.linkedin.com/in/sachin-sharma-952169273/" target="_blank" class="button-linkedin">
+            <img src="https://media.licdn.com/dms/image/D5603AQHPrQBcv_7cVw/profile-displayphoto-shrink_400_400/0/1704559068381?e=1718841600&v=beta&t=JYhIwWJlJt9yZ_k0dP0dXtcjQiIOSMLjRAlzTJyEQ0A" alt="LinkedIn Profile Picture">
+          </a>
+          <div class="button-heading">
+            <h2><u>Co-Founder</u></h2>
+              <h5>Sachin Sharma</h5>
+          </div>
+          </div>
+          <!-- Button 3 -->
+          <div class="post-name">
+          <a href="https://www.linkedin.com/in/rajat-bhumla-1a5818274/" target="_blank" class="button-linkedin">
+            <img src="Image/Unknown-2.png" alt="LinkedIn Profile Picture">
+          </a>
+          <div class="button-heading">
+            <h2><u>Marketing Manager</u></h2>
+              <h5>Rajat Bhumla</h5>
+            </div>
+          </div>
+          <!-- Button 4 -->
+          <div class="post-name">
+          <a href="https://www.linkedin.com/in/darshil-maharwal-a27164257/" target="_blank" class="button-linkedin">
+            <img src="https://media.licdn.com/dms/image/D4D03AQHMNbWcyqtE5A/profile-displayphoto-shrink_100_100/0/1698815334025?e=1718841600&v=beta&t=_LyDl2vokQatITMPw0jsZvoPMcJV3vlbl88llKH9prY" alt="LinkedIn Profile Picture">
+          </a>
+          <div class="button-heading">
+            <h2><u>Finance Manager</u></h3>
+              <h5>Darshil Maharwal</h5>
+            </div>
+          </div>
+          <!-- Button 5 -->
+          <div class="post-name">
+          <a href="https://www.linkedin.com/in/chetan-pratap-singh-ranawat-b1675b28b/" target="_blank" class="button-linkedin">
+            <img src="https://pps.whatsapp.net/v/t61.24694-24/384857816_630139502615974_2979765229318252756_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_ASBIBlopDw1kwHRm6dk0e1WTA79UAIqFveFsdbJA5JhuMw&oe=662717E3&_nc_sid=e6ed6c&_nc_cat=104" alt="LinkedIn Profile Picture">
+          </a>
+          <div class="button-heading">
+            <h2><u>Community Manager</u></h2>
+              <h5>Chetan Pratap Singh Ranawat</h5>
+            </div>
+          </div>
+        </div>
+         
+      </section>
+      </div>
+
+ </div>
+<!------------------------------------------------------------------------------------------------->
+  
+
+
+  <!--nav bat------------------------------------------------------------>
+  <footer>
+    
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

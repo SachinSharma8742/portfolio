@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <title>Phone Paradise</title>
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    
+    <!-- Dark mode -->
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    
+    <!-- Chrome, Firefox OS, Opera and Vivaldi -->
+    <meta name="theme-color" content="#4285f4">
+    
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4285f4">
+    
+
+    
+    <!-- iOS Safari specific -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <style>
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  
+  width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   padding-top:20px ;
+   padding-bottom: 20px;
+    background: #11141a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    opacity: 60%;
+}
+
+
+
+nav a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+nav a:active,
+nav a.active {
+    color: #0ef;
+}
+
+
+
+section {
+  height: 100vh;
+  display: flex;  
+}
+
+#home {
+  background-image: url('Image/layer1.jpeg');
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#about {
+  background-image: url('Image/layer2.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-right: 5px;
+}
+
+#services {
+  background-image: url('Image/layer3.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#contact {
+  background-image: url('Image/layer4.jpeg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.content-home{
+  text-align: center;
+  color: #fff; 
+}
+
+.content {
+  text-align: center;
+  color: #fff;
+}
+
+.content h1,
+.content h2 {
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 18px;
+}
+
+.mobile-black-box{
+  top: 20%;
+  position: relative;
+  height: 45%;
+  width: 65vw;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50px;
+  display: flex;
+  padding: 0 10px 10px 10px;
+  opacity: 90%;
+  left: 30%;
+  
+
+}
+.mobile-text{
+  padding: 0 10px 10px 15px;
+  margin: auto;
+
+}
+
+.mobile-entry-video{
+  position: relative;
+  top: 0;
+  
+  margin-left: 13%;
+}
+.mobile-video{
+
+  height: 40%;
+  width: 40vw;
+
+}
+
+.mobile-First-text{
+  position: absolute;
+  font-size: 0.5rem;
+  bottom: 0;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(102, 93, 93, 0.7); 
+  border-top-left-radius: 20px;
+  padding: 10px;
+  -webkit-box-shadow: 2px 2px 10px rgba(29, 219, 219, 0.5);
+          box-shadow: 2px 2px 10px rgba(29, 219, 219, 0.5);
+  
+  
+  color: aliceblue;        
+}
+
+/* Add more styling to enhance the appearance of your website */
+
+
+.toggle-switch {
+    position: relative;
+    width: 120px;
+    height: 60px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.toggle-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200%; /* double the width to hold both images */
+    height: 100%;
+    transition: transform 0.3s ease;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.36);
+  
+}
+
+.toggle-image {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+
+.image-1 {
+    left: 60px; /* Center image-1 in the left half */
+    border-radius: 50%;
+}
+
+.image-2 {
+    left: 120px; /* Center image-2 in the right half, hidden initially */
+    display: none;
+    border-radius: 50%;
+}
+
+.toggle-input:checked + .toggle-label .toggle-inner {
+    transform: translateX(-50%);
+}
+
+.toggle-input:checked + .toggle-label .toggle-inner .image-1  {
+    display: none;
+    
+}
+
+.toggle-input:checked + .toggle-label .toggle-inner .image-2 {
+    display: block;
+}
+
+
+.content .content-one,
+.content .content-two {
+    display: none;
+}
+
+.toggle-input:checked ~ .content .content-two {
+    display: block;
+}
+
+.toggle-input:not(:checked) ~ .content .content-one {
+    display: block;
+}
+@-webkit-keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.content {
+height:auto;
+width: 35%;
+display: flex;
+font-size: small;
+
+
+
+}
+.gameplay{
+    height: 14.3vh;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(29, 219, 219, 0.5);
+}
+
+.typewriter {
+  font-size: 1.2em;
+  white-space: pre-wrap; /* Preserves spaces and line breaks */
+  overflow: hidden; /* Ensures the text is not shown outside its container */
+  border-right: .15em solid orange; /* Creates the typewriter cursor */
+  
+        }
+
+    .mobile-cool-button {
+    display: inline-block;
+    padding: 2px 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: background-color 0.mobile-3s;
+    -o-transition: background-color 0.mobile-3s;
+    transition: background-color 0.mobile-3s;
+    margin-top: 10px;
+
+    
+  }
+  
+  .mobile-cool-button-green {
+    background-color: #04f831;
+    -webkit-animation: heartbeat 1.mobile-5s infinite;
+            animation: heartbeat 1.mobile-5s infinite;
+    color: #000000;
+    
+  }
+  
+  .mobile-cool-button-red{
+    background-color: #00ffee;
+    -webkit-animation: heartbeat 1.mobile-5s infinite;
+    animation: heartbeat 1.mobile-5s infinite;
+    color: #000000;
+   
+  }
+  
+  .mobile-cool-button-green:active,.mobile-cool-button-green:active{
+    background-color: #ffffff78;
+  }
+  
+  .mobile-cool-button-red:active,.mobile-cool-button-red:active {
+    background-color: #ffffff97;
+  }        
+.content-about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  position: relative;
+  padding-top: 30px;
+  
+}
+/* styles.css */
+.fade-in-text {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+/* Add this class to trigger the fade-in effect */
+.fade-in-text.visible {
+    opacity: 1;
+}
+
+.rank-table{
+  background-color: #4b4a4ab7;
+  min-width: 180px;
+  border-radius: 20px;
+  padding: 5px;
+}
+.mobile-news-update{
+    -webkit-animation: heartbeat 1.5s infinite;
+            animation: heartbeat 1.5s infinite;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: rgba(0, 208, 255, 0.85);
+    z-index: 500;
+    font-size: 1.5rem;
+    font-weight: 500;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+   
+    text-align: center;
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 38%;
+    }
+
+    .mobile-First-text-news1{
+   
+    height: 30%;
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+    border-radius: 20px;
+    padding: 10px 20px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.mobile-5);
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.mobile-5); 
+    margin-top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: small;
+    border: 3px solid beige;
+    padding-top: 30px;
+
+   
+  }
+
+  .mobile-table{
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 40%;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    background: rgba(102, 93, 93, 0.mobile-7); 
+    border-radius: 3px;
+    position: relative;
+    padding: 10px 20px;
+    top: 5%;
+   
+    color: aliceblue;
+    font-size: xx-small;
+    background: rgba(81, 80, 80, 0.mobile-7);
+    margin-left: 10%;
+  
+  }
+  @-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Apply animations to live status dots */
+  .mobile-live-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .mobile-green-dot {
+    background-color: green;
+    -webkit-animation: blink 1s infinite;
+            animation: blink 1s infinite;
+  }
+  
+  .mobile-gray-dot {
+    background-color: gray;
+  }
+  
+  /* Adjust table width and cell alignment */
+  table {
+    /* Set the width to 100% of its container */
+    border-collapse: collapse; /* Collapse table borders */
+  }
+  
+  th, td {
+    text-align: left; /* Align text to the left */
+    padding: 8px; /* Add padding to cells */
+    border-bottom: 1px solid #000000; /* Add bottom border to cells */
+    
+  }
+  
+  th {
+    background-color: #3e3c3c; /* Background color for table headers */
+  }
+  
+  tr:active,tr:active {
+    background-color: #f5f5f5; /* active color for table rows */
+  }
+  .mobile-button-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 200px;
+    height: 40vh;  
+    width: auto;
+    
+    
+  }
+  
+  .mobile-button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #838383;
+    border-radius: 50%;
+    margin: 0 10px;
+    overflow: hidden;
+    -webkit-transition: width 0.mobile-5s, height 0.mobile-5s;
+    -o-transition: width 0.mobile-5s, height 0.mobile-5s;
+    transition: width 0.mobile-5s, height 0.mobile-5s;
+    
+  }
+  .mobile-button:active {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .mobile-button img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    -webkit-transition: width 0.mobile-5s, height 0.mobile-5s;
+    -o-transition: width 0.mobile-5s, height 0.mobile-5s;
+    transition: width 0.mobile-5s, height 0.mobile-5s;
+  }
+  .mobile-button:active img {
+    width: 100px;
+    height: 100px;
+  }
+  .mobile-blend{mix-blend-mode:multiply ;}
+     
+  .content-contact{
+    width: 100vw;
+  }
+  </style>
+</head>
+<body>
+<!-- Preloader -->
+<div class="preloader">
+  <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+</div>
+
+<!-- Your content here -->
+  <div class="mobile-display">
+    <header>
+      <nav>
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+      </nav>
+  </header>
+  
+    <section id="home">
+      <div class="content-home">
+  
+        <div class="mobile-black-box">
+          <div class="mobile-text">
+            <div class="mobile-entry-video" id="mobile-video-container">
+              <video class="mobile-video" id="entry" autoplay="autoplay" muted alt="video not found" onended="playLoop()" style="display: block;">
+                <source src="Video/entry.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <video class="mobile-video" id="loop" loop muted alt="video not found" style="display: none;">
+                <source src="Video/loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <br>
+            <h1 class="mobile-logo-name"> Felo Esports</h1>
+            <br>
+            <br>
+            <h2>R C D</h2>
+          
+            <pre>(Rise Conqueror and Dominate)</pre>
+          
+           
+          </div>
+        </div> <!-- black box -->
+  
+        <div class="mobile-First-text">
+          <h2><u>About us</u>  :-</h2>
+          <pre>
+  In the dynamic world of competitive gaming, 
+  where virtual battles are waged and 
+  champions rise, Felo Esports stands at 
+  the forefront as a premier gaming esports
+  company. With a passion for gaming deeply 
+  rooted in our DNA, we have carved our niche
+  in the digital arena, where strategy, 
+  skill, and teamwork converge to create a 
+  thrilling spectator sport.
+          </pre>
+        </div> 
+         
+      </div>
+    </section>
+  
+    <section id="about">
+      <div class="content-about" >
+  
+        <div class="toggle-switch">
+          <input type="checkbox" id="toggle" class="toggle-input">
+          <label for="toggle" class="toggle-label">
+              <span class="toggle-inner">
+                  <img src="Image/image2.jpg" alt="Image 1" class="toggle-image image-1">
+                  <img src="Image/image1.jpg" alt="Image 2" class="toggle-image image-2">
+              </span>
+          </label>
+      </div>
+      <div class="content">
+          <div class="content-one">
+              <video class="gameplay" src="Video/bgmi.mp4" autoplay="autoplay" muted loop ></video>
+              <div class="mobile-video-content"><br><h1>BGMI</h1><hr><pre class="typewriter">
+  BGMI, or Battlegrounds Mobile India, is a popular online multiplayer battle royale game for the Indian market by Krafton. It allows players to compete in intense solo, duo, or squad matches on different maps. BGMI includes cultural elements and language options that resonate with Indian gamers. Despite past regulatory issues, the game remains a favorite among mobile gamers in India due to its engaging and competitive gameplay.</pre>
+                  <br>
+                  <a href="https://www.cognitoforms.com/FeloEsports/BGMITORNAMENTREGISTRATION" class="mobile-cool-button mobile-cool-button-green" target="_blank" title="Goes to congrnito">Join now</a>
+                  <br>
+                  <br>
+                  <h3><u>BGMI Leader Board</u></h3>
+                  <br>
+                  <table class="rank-table">
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Team</th>
+                        <th>Score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Team 1</td>
+                        <td>1000</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Team 2</td>
+                        <td>950</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Team 3</td>
+                        <td>850</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+          </div>
+          <div class="content-two">
+              <video class="gameplay" src="Video/valvo.mp4" autoplay="autoplay" muted loop ></video>
+              <div class="mobile-video-content" ><br><h1>Valo</h1><hr><pre class="typewriter">
+                  Valorant, known as VALO, is a popular tactical first-person shooter from Riot Games. It combines precise gunplay with unique character abilities in strategic 5v5 matches that emphasize teamwork and communication. The game focuses on attack and defense scenarios, with teams completing objectives. VALO's fast-paced, competitive gameplay has led to a strong esports scene and attracts players with regular updates and events.</pre>
+                  <br>
+                  <a href="https://www.cognitoforms.com/FeloEsports/VALORANTTOURNAMENTREGISTRATION" class="mobile-cool-button mobile-cool-button-red" target="_blank" title="Goes to congrnito">Join now</a>
+                  <br>
+                  <br>
+                  <h3><u>Valo Leader Board</u></h3>
+                  <br>
+                  <table class="rank-table">
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Player 1</td>
+                        <td>1000</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Player 2</td>
+                        <td>950</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Player 3</td>
+                        <td>850</td>
+                      </tr>
+                      <!-- Add more rows as needed -->
+                    </tbody>
+                  </table>
+                  </div>
+          </div>
+      </div>
+  
+        
+      
+      </div>
+    </section>
+  
+    <section id="services">
+      <div class="content-services">
+        <h1 class="mobile-news-update">News and Updates</h1>
+  
+  <div class="mobile-First-text-news1">
+  <h1 style="color: #ddff01;">Patch Update 1.1.0 Now Live</h2>
+  <br>
+  
+  <h4>April 5, 2024</h4>
+  
+  <br>
+  <p>
+We've just released Patch Update 1.1.0,
+featuring bug fixes,performance improvements,
+and new content. Check out the patch notes 
+for all the details. Get ready to dive back 
+into the action with exciting new features!
+  </p>   
+  </div>
+  
+  <div class="mobile-table"><table>
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Date</th>
+        <th>Tournament Name</th>
+        <th>Live</th> <!-- New column for live status -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Enter details directly in the table -->
+      <tr class="fade-in">
+        <td>1</td>
+        <td>2024-04-14</td>
+        <td>New Game Release: Journey to the Stars</td>
+        <td><span class="mobile-live-dot mobile-green-dot"></span></td> <!-- Green blinking dot for live status -->
+      </tr>
+      <tr class="slide-in">
+        <td>2</td>
+        <td>2024-04-10</td>
+        <td>Community Event: SpaceCon 2024</td>
+        <td><span class="mobile-live-dot mobile-gray-dot"></span></td> <!-- Gray dot for non-live status -->
+      </tr>
+      <tr class="zoom-in">
+        <td>3</td>
+        <td>2024-04-05</td>
+        <td>Patch Update 1.1.0 Now Live</td>
+        <td><span class="mobile-live-dot mobile-green-dot"></span></td> 
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+   </table></div>
+      </div>
+    </section>
+  
+    <section id="contact">
+      <div class="content-contact">
+        <div class="mobile-button-container">
+          <a href="https://www.youtube.com/@FELO_ESPORTS/" target="_blank" class="mobile-button">
+            <img src="Image/youtube-logo-removebg-preview.png" alt="YouTube" loading="lazy">
+          </a>
+          <a href="https://www.instagram.com/felo_esports/" target="_blank" class="mobile-button">
+            <img src="Image/instagram-logo-removebg-preview.png" alt="Instagram" loading="lazy">
+          </a>
+          <a href="https://discord.gg/gJQRABjY" target="_blank" class="mobile-button">
+            <img src="Image/discord-logo-removebg-preview.png" alt="Discord" loading="lazy">
+          </a>
+          <a href="https://chat.whatsapp.com/BsWzYOB54emBBJu85C6ORt" target="_blank" class="mobile-button">
+            <img src="Image/whatsapp-logo-removebg-preview.png" alt="whatsapp" loading="lazy">
+          </a>
+        </div>s
+        
+      </div>
+    </section>
+  
+  </div>
+
+<script >
+function redirectIfNeeded() {
+            if (window.innerWidth > 800) {
+                window.location.href = "index.html"; // Replace with your target URL
+            }
+        }
+
+        // Redirect on initial load
+        window.onload = redirectIfNeeded;
+
+        // Redirect if the window is resized
+        window.onresize = redirectIfNeeded;
+  
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+};
+function playLoop() {
+  document.getElementById("entry").style.display = "none"; 
+  document.getElementById("loop").style.display = "block"; 
+  document.getElementById("loop").play();
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleInput = document.getElementById('toggle');
+    const contentOne = document.querySelector('.content-one');
+    const contentTwo = document.querySelector('.content-two');
+    contentOne.style.display='block';
+
+    toggleInput.addEventListener('change', function() {
+        if (toggleInput.checked) {
+            contentOne.style.display = 'none';
+            contentTwo.style.display = 'block';
+        } else {
+            contentOne.style.display = 'block';
+            contentTwo.style.display = 'none';
+        }
+    });
+});
+
+const videos = document.querySelectorAll("video");
+videos.forEach((video) => {
+  video.removeAttribute("controls");
+  video.addEventListener("webkitfullscreenchange", () => {
+    video.pause();
+    video.exitFullscreen();
+  });
+  video.addEventListener("fullscreenchange", () => {
+    video.pause();
+    video.exitFullscreen();
+  });
+});
+  </script>
+</body>
+</html>
