@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-background-color: #dde1e7;
+    --button-text-color: #000000;
+    --button-inner-color:#dde1e7;
+}
+
+body.dark-mode {
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --button-background-color: #444444;
+    --button-text-color: #ffffff;
+    --button-inner-color:#252627;
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    padding: 0 1rem;
+}
+section{
+    display: flex;
+    flex-direction: column;
+}
+.calculator{
+    width: 600px;
+    border-radius: 20px;
+    background: #dde1e7;
+    box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+    padding: 45px;
+    scale: 0.6;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+}
+
+.calulator-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+button{
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color:white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border: 0.5px solid rgba(128, 128, 128, 0.225);
+}
+
+button:hover{
+    font-size: 2rem;
+}
+
+#equal-btn{
+    width: 100%;
+    font-size: 3.5rem;
+    aspect-ratio: 4/0.88;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+  background: rgb(253, 176, 35);
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  color: rgb(137, 137, 137);
+}
+
+#equal-btn:hover{
+    font-size: 4rem;
+}
+#equal-btn:active{
+   
+    box-shadow: -2px -2px 4px rgba(94,104,121,0.3), 5px 5px 4px rgba(255,255,255,0.45);
+ }
+.btn{
+    width: 20%;
+    aspect-ratio: 1/1;
+    margin: 1rem .5rem;
+cursor: pointer;
+  border: 0;
+  font-size: 2rem;
+  border-radius: 50px;
+  background-color: var(--button-inner-color);
+  box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+  color: rgb(137, 137, 137);
+}
+.btn:nth-child(4n){
+    background: rgb(253, 176, 35);
+    color: white;
+}
+.btn:hover{
+   transform: scale(1.1);
+}
+.btn:active{
+    transform: scale(1.1);
+    box-shadow: -2px -2px 4px rgba(94,104,121,0.3), 5px 5px 4px rgba(255,255,255,0.45);
+ }
+#display{
+    height: 100px;
+  width: 100%;
+  border-radius: 10px;
+  background: var(--button-background-color);
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  border: 0;
+  color: var(--button-text-color);
+  font-size: 2.5rem;
+  padding: 30px 30px;
+  margin-bottom: 20px;
+}
+#display:focus {
+    outline: none;
+    background: #dde1e7;
+    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  }
+
+
+
+  .toggle-switch {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+    top: 100px;
+  }
+  
+  .switch-label {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: var(--dark);
+    border-radius: 25px;
+    cursor: pointer;
+    border: 3px solid var(--dark);
+  }
+  
+  .checkbox {
+    position: absolute;
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .checkbox:checked ~ .slider {
+    background-color: var(--light);
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+    box-shadow: inset 12px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .checkbox:checked ~ .slider::before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+    background-color: var(--dark);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <title>Budget Web App</title>
+  </head>
+  <body
+    class="text-black"
+    style="
+      font-weight: 400;
+      font-style: normal;
+    ">
+    <section class="flex justify-center mt-20">
+      <div class="w-[450px] border-2 p-8">
+        <h1 class="text-4xl">₹<span class="text-5xl" id="balance">0</span> <span class="text-xl">Main Balance</span></h1>
+
+        <div
+          class="flex justify-around items-center border-2 border-black rounded-3xl mt-4 p-4"
+        >
+          <div class="no">
+            <h1 class="text-center text-xl">Income</h1>
+            <p 
+              class="mt-2 text-2xl py-2 px-8 border-2 border-[#d36feb] rounded-xl"
+              style="padding: 0 0 0 12px;
+              border-radius: 5px;
+              outline: none;
+              border: 1px solid  rgb(16, 86, 82);
+              background-color: rgb(251, 243, 228);
+              transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);">
+              ₹<span id="income">0</span>
+            </p>
+          </div>
+          <div class="no">
+            <h1 class="text-center text-xl">Expense</h1>
+            <p 
+              class="mt-2 text-2xl py-2 px-8 border-2 border-[#d36feb] rounded-xl"
+              style="padding: 0 0 0 12px;
+              border-radius: 5px;
+              outline: none;
+              border: 1px solid  rgb(16, 86, 82);
+              background-color: rgb(251, 243, 228);
+              transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);">
+              ₹<span id="expense">0</span>
+            </p>
+          </div>
+        </div>
+        <form id="form">
+          <input
+            class="text-xl px-4 w-full text-2xl bg-black text-[#d36feb] border-2 border-[#d36feb] rounded-xl mt-5 focus:border-[#d36feb]"
+            type="number"
+            placeholder="Amount"
+            id="amount"
+            required
+            style="
+            height: 40px;
+            padding: 0 0 0 12px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid  rgb(16, 86, 82);
+            background-color: rgb(251, 243, 228);
+            transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);"
+          />
+
+          <input
+            class="text-xl px-4 w-full mt-5 text-2xl bg-black text-[#d36feb] border-2 border-[#d36feb] rounded-xl focus:border-[#d36feb]"
+            type="text"
+            placeholder="Details"
+            id="details"
+            style="
+            height: 40px;
+            padding: 0 0 0 12px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid  rgb(16, 86, 82);
+            background-color: rgb(251, 243, 228);
+            transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);"
+            required
+          />
+
+          <div class="text-center">
+            <button onclick="clickHandler1()"
+              class="border-2 text-red-400 border-[#d36feb] rounded-xl w-[48%] text-2xl mt-5 py-2 mr-2"
+              style="
+             
+              padding: 10px 18px;
+              gap: 10px;
+              width: 45%;
+              height: 36px;
+              background: rgba(16, 86, 82, .75);
+              box-shadow: 0px 0.5px 0.5px #F3D2C9, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+              border-radius: 5px;
+              border: 0;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 15px;
+              color: #000000;"
+            >
+              Expense
+            </button>
+            <button onclick="clickHandler2()"
+              class="border-2 text-green-400 border-[#d36feb] rounded-xl w-[48%] text-2xl mt-5 py-2"
+              style="
+              padding: 10px 18px;
+              gap: 10px;
+              width: 45%;
+              height: 36px;
+              background: rgba(16, 86, 82, .75);
+              box-shadow: 0px 0.5px 0.5px #F3D2C9, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+              border-radius: 5px;
+              border: 0;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 15px;
+              color: #000000;"
+            >
+              Income
+            </button>
+          </div>
+        </form>
+        <hr class="my-8 border border-black" />
+
+        <div>
+          <h1 class="text-3xl" style="padding: 10px 10px 10px 20px;
+          background-color: rgba(16, 86, 82, .5);">transactions</h1>
+
+          <div id="transactions" class="mt-6 space-y-3">
+            <!-- <h2 class="border-2 text-xl  rounded-xl py-2 px-4">
+              income ₹5000 by freelance
+            </h2> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
