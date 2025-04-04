@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* to prevent scrolling */
+            background-color: #f0f0f0; /* background color */
+        }
+
+        .proposal {
+            text-align: center;
+            margin-top: 20%;
+            font-size: 3rem;
+            color: red;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px; /* particle size */
+            height: 10px; /* particle size */
+            background-color: transparent; /* confetti color */
+            opacity: 0.8;
+            animation: confetti-fall 3s ease-in-out infinite;
+            transform: rotateZ(45deg);
+            background-image: radial-gradient(white, transparent); /* star-like shape */
+            border-radius: 50%;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotateZ(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotateZ(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="proposal">
+        <h1>I love you too</h1>
+    </div>
+
+    <!-- Confetti animation -->
+    <script>
+        function createConfetti() {
+            const confettiContainer = document.createElement('div');
+            confettiContainer.classList.add('confetti');
+            confettiContainer.style.left = Math.random() * window.innerWidth + 'px';
+            document.body.appendChild(confettiContainer);
+
+            setTimeout(() => {
+                document.body.removeChild(confettiContainer);
+            }, 3000); // Remove confetti after 3 seconds
+        }
+
+        setInterval(createConfetti, 100); // Create confetti every 100 milliseconds
+    </script>
+</body>
+</html>
