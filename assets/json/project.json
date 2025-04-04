@@ -241,7 +241,7 @@
     {
       "title": "Weather App",
       "category": "web_applications",
-      "url": "./Projects/Web Projects/webapps/weatherapp/index.html",
+      "url": "./Projects/Web%20Projects/webapps/weatherapp/index.html",
       "image": "./assets/images/project-11.png",
       "show": false
     },
