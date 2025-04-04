@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI Career Mentor</title>
+    <link rel="stylesheet" href="other.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        /* Base styles remain the same... */
+
+        /* Common screen styles */
+       
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Career Fields Screen (previously created) -->
+        <div class="screen">
+            <div class="career-header" id="careerFieldsScreen">
+                <div style="display: flex; align-items: center;">
+                    <a href="index.html" class="back-btn" ><i class="fa-solid fa-house"></i></a>
+                    <h2>Choose Field of Interest</h2>
+                </div>
+                <div class="user-info">
+                    <span>Jayesh saini</span>
+                    <div class="user-avatar">👤</div>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Choose Field of Interest">
+                    <button class="ask-ai-btn" onclick="showbot()" id="botToggle">Ask AI</button>
+                </div>
+             
+            </div>
+
+            <section class="botbox">
+                <iframe id="ibot" style="opacity: 0;"
+                src="https://www.chatbase.co/chatbot-iframe/JyN5qHcQcXYc98Ml2mhK5"
+                frameborder="0"
+            ></iframe>
+            </section>
+            <div class="fields-grid menu-grid">
+                <a href="" class="field-item">Data Analyst</a>
+                <a href="" class="field-item">Data Scientist</a>
+                <a href="" class="field-item">Machine learning Eng.</a>
+                <a href="" class="field-item">Business Intel Analyst</a>
+                <a href="" class="field-item">Quantitative Analyst</a>
+                <a href="" class="field-item">Data Engineer</a>
+            </div>
+        </div>
+
+        <!-- Resources Screen -->
+         
+
+    </div>
+    <script src="bot.js"></script>
+</body>
+</html>
