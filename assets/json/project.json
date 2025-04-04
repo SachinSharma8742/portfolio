@@ -190,13 +190,6 @@
       "show": false
     },
     {
-      "title": "Portfolio",
-      "category": "web_applications",
-      "url": "./Projects/mainwebsite-main/Potfolio/index.html",
-      "image": "https://repository-images.githubusercontent.com/384091706/a1614500-e03f-11eb-986a-30f6f0d4f1cc",
-      "show": false
-    },
-    {
       "title": "Parallax Effect",
       "category": "information",
       "url": "./Projects/mainwebsite-main/parallax effect/index.html",
