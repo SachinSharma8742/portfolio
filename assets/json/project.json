@@ -1,0 +1,438 @@
+{
+  "projects": [
+    {
+      "title": "Custom Cursor",
+      "category": "web_applications",
+      "url": "Projects/30days30submits-master/day-01/index.html",
+      "image": "Projects/30days30submits-master/day-01/preview/preview.jpg",
+      "show": false
+    },
+    {
+      "title": "Css Theme Switcher",
+      "category": "web_applications",
+      "url": "Projects/30days30submits-master/day-02/index.html",
+      "image": "Projects/30days30submits-master/day-02/preview/preview.jpg",
+      "show": false
+    },
+    {
+      "title": "Joke Generator",
+      "category": "games",
+      "url": "Projects/30days30submits-master/day-03/index.html",
+      "image": "Projects/30days30submits-master/day-03/preview/preview.jpg",
+      "show": false
+    },
+    {
+      "title": "Number Fact",
+      "category": "information",
+      "url": "Projects/30days30submits-master/day-04/index.html",
+      "image": "Projects/30days30submits-master/day-04/preview/preview.jpg",
+      "show": false
+    },
+    {
+      "title": "Count down",
+      "category": "tools",
+      "url": "Projects/30days30submits-master/day-05/index.html",
+      "image": "Projects/30days30submits-master/day-05/preview/preview.jpg",
+      "show": false
+    },
+    {
+      "title": "Advance grid layout",
+      "category": "web_applications",
+      "url": "Projects/30days30submits-master/day-06/index.html",
+      "image": "Projects/30days30submits-master/day-06/preview/preview.jpg",
+      "show": false
+    },
+    {
+      "title": "Photo Grid",
+      "category": "web_applications",
+      "url": "Projects/30days30submits-master/day-07/index.html",
+      "image": "Projects/30days30submits-master/day-07/preview/preview.jpg",
+      "show": false
+    },
+    {
+      "title": "Search Photo",
+      "category": "web_applications",
+      "url": "Projects/30days30submits-master/day-08/index.html",
+      "image": "Projects/30days30submits-master/day-08/preview/preview.jpg",
+      "show": false
+    },
+    {
+      "title": "Key Code",
+      "category": "tools",
+      "url": "Projects/30days30submits-master/day-10/index.html",
+      "image": "Projects/30days30submits-master/day-10/preview/preview.png",
+      "show": false
+    },
+    {
+      "title": "Navbar",
+      "category": "web_applications",
+      "url": "Projects/30days30submits-master/day-11/index.html",
+      "image": "Projects/30days30submits-master/day-11/preview/preview.png",
+      "show": false
+    },
+    {
+      "title": "Expanding Card",
+      "category": "web_applications",
+      "url": "Projects/30days30submits-master/day-12/index.html",
+      "image": "Projects/30days30submits-master/day-12/preview/preview.png",
+      "show": false
+    },
+    {
+      "title": "Analog Clock",
+      "category": "tools",
+      "url": "Projects/30days30submits-master/day-13/index.html",
+      "image": "Projects/30days30submits-master/day-13/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "Digital Clock",
+      "category": "tools",
+      "url": "Projects/Web Projects/tools/DigitalClock/index.html",
+      "image": "./assets/images/digital-clock.jpg",
+      "show": false
+    },
+    {
+      "title": "Hover Tooltip",
+      "category": "tools",
+      "url": "Projects/30days30submits-master/day-18/index.html",
+      "image": "Projects/30days30submits-master/day-18/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "Multi Step Forms",
+      "category": "tools",
+      "url": "Projects/30days30submits-master/day-20/index.html",
+      "image": "Projects/30days30submits-master/day-20/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "Recipe App",
+      "category": "tools",
+      "url": "Projects/30days30submits-master/day-22/index.html",
+      "image": "Projects/30days30submits-master/day-22/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "Speech Recognition",
+      "category": "tools",
+      "url": "Projects/30days30submits-master/day-24/index.html",
+      "image": "Projects/30days30submits-master/day-24/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "View Slider",
+      "category": "tools",
+      "url": "Projects/30days30submits-master/day-25/index.html",
+      "image": "Projects/30days30submits-master/day-25/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "Quiz 2",
+      "category": "games",
+      "url": "Projects/30days30submits-master/day-27/index.html",
+      "image": "Projects/30days30submits-master/day-27/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "Career Mentor",
+      "category": "web_applications",
+      "url": "Projects/AiCareerMentor/index.html",
+      "image": "Projects/AiCareerMentor/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "Amazon",
+      "category": "web_applications",
+      "url": "Projects/amazon/amazon.html",
+      "image": "Projects/amazon/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "Distance Finder",
+      "category": "web_applications",
+      "url": "Projects/EPLQ/index.html",
+      "image": "Projects/EPLQ/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "Startup Website",
+      "category": "web_applications",
+      "url": "Projects/final/index.html",
+      "image": "Projects/final/preview/image.png",
+      "show": false
+    },
+    {
+      "title": "Drum",
+      "category": "games",
+      "url": "Projects/Javascript-projects-main/Drum/index.html",
+      "image": "https://projects-static.raspberrypi.org/projects/drum-star/1f88897472851d80788dc9401486391259758df1/en/images/banner.png",
+      "show": false
+    },
+    {
+      "title": "Slide Show",
+      "category": "web_applications",
+      "url": "Projects/Javascript-projects-main/SlideShow/index.html",
+      "image": "https://cdn.smartslider3.com/wp-content/uploads/2020/06/newsslider.png",
+      "show": false
+    },
+    {
+      "title": "Smart Grocery list",
+      "category": "tools",
+      "url": "Projects/LIST/index.html",
+      "image": "https://www.adsumsoftware.com/public/uploads/blog/main/2022/07/what-is-a-grocery-list-app.png",
+      "show": false
+    },
+    {
+      "title": "Countdown timer",
+      "category": "tools",
+      "url": "Projects/mainwebsite-main/Countdown-timer-main/index.html",
+      "image": "https://i.ytimg.com/vi/UxgpS73JB2Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDzd4g2oxtqK6PqiQ-QpI8AaDRXww",
+      "show": false
+    },
+    {
+      "title": "Landscape Responsive Card",
+      "category": "web_applications",
+      "url": "Projects/mainwebsite-main/landscape-responsive-card-main/index.html",
+      "image": "https://screenshots.webflow.com/sites/5d03ce671c2fed6b63c424bf/20190614201302_5b47b3ca458a7e689d625f315a762093.png",
+      "show": false
+    },
+    {
+      "title": "Portfolio",
+      "category": "web_applications",
+      "url": "Projects/mainwebsite-main/Potfolio/index.html",
+      "image": "https://repository-images.githubusercontent.com/384091706/a1614500-e03f-11eb-986a-30f6f0d4f1cc",
+      "show": false
+    },
+    {
+      "title": "Parallax Effect",
+      "category": "information",
+      "url": "Projects/mainwebsite-main/parallax effect/index.html",
+      "image": "https://framerusercontent.com/images/j9oNXS6N44jKZFnNa344om9ZCI.webp",
+      "show": false
+    },
+    {
+      "title": "Parallax Mountain",
+      "category": "information",
+      "url": "Projects/mainwebsite-main/Parallax mountain /index.html",
+      "image": "https://cdn.sanity.io/images/r115idoc/production/76f393e46a63de3fda9100338077f4ab6013268e-1280x720.jpg?w=3840&q=75&fit=clip&auto=format",
+      "show": false
+    },
+    {
+      "title": "Parallax Website",
+      "category": "information",
+      "url": "Projects/mainwebsite-main/Parallax_Website_15-05-23-main/index.html",
+      "image": "https://www.figma.com/community/resource/222ff2ee-ddeb-4e09-ad27-21ef29c6b2fc/thumbnail",
+      "show": false
+    },
+    {
+      "title": "Gaming Website",
+      "category": "web_applications",
+      "url": "Projects/mainwebsite-main/index.html",
+      "image": "https://img.freepik.com/free-vector/game-night-landing-page-template_23-2151062992.jpg",
+      "show": false
+    },
+    {
+      "title": "Pet Simulator",
+      "category": "games",
+      "url": "Projects/Pet simulator/index.html",
+      "image": "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/nofilter_1_1.png",
+      "show": false
+    },
+    {
+      "title": "Propose Website",
+      "category": "web_applications",
+      "url": "Projects/Prepose website/index.html",
+      "image": "https://www.hindustantimes.com/ht-img/img/2024/02/07/550x309/c3a8e7a148eaa6f85471a32c_1707301488264_1707301488422.jpg",
+      "show": false
+    },
+    {
+      "title": "Budget App",
+      "category": "web_applications",
+      "url": "./Projects/Web Projects/webapps/budgetwebapp",
+      "image": "./assets/images/project-1.jpg",
+      "show": false
+    },
+    {
+      "title": "Calculator",
+      "category": "web_applications",
+      "url": "./Projects/Web Projects/webapps/calculator",
+      "image": "./assets/images/project-10.png",
+      "show": false
+    },
+    {
+      "title": "Weather App",
+      "category": "web_applications",
+      "url": "./Projects/Web Projects/webapps/weatherapp",
+      "image": "./assets/images/project-11.png",
+      "show": false
+    },
+    {
+      "title": "Coin Toss",
+      "category": "games",
+      "url": "./Projects/Web Projects/games/cointossweb",
+      "image": "./assets/images/project-12.png",
+      "show": false
+    },
+    {
+      "title": "Dice Game",
+      "category": "games",
+      "url": "./Projects/Web Projects/games/dicegame/",
+      "image": "./assets/images/project-13.png",
+      "show": false
+    },
+    {
+      "title": "Number Guessing Game",
+      "category": "games",
+      "url": "./Projects/Web Projects/games/numberguessinggame/",
+      "image": "./assets/images/project-14.png",
+      "show": false
+    },
+    {
+      "title": "Quiz",
+      "category": "games",
+      "url": "./Projects/Web Projects/games/quizgame",
+      "image": "./assets/images/project-15.png",
+      "show": false
+    },
+    {
+      "title": "Rock Paper Scissors",
+      "category": "games",
+      "url": "./Projects/Web Projects/games/rockpaperscissorsgame",
+      "image": "./assets/images/project-16.png",
+      "show": false
+    },
+    {
+      "title": "Snake Game",
+      "category": "games",
+      "url": "./Projects/Web Projects/games/snakegame/",
+      "image": "./assets/images/project-17.png",
+      "show": false
+    },
+    {
+      "title": "Tic Tac Toe",
+      "category": "games",
+      "url": "./Projects/Web Projects/games/tictactoe/",
+      "image": "./assets/images/project-18.png",
+      "show": false
+    },
+    {
+      "title": "Age Calculator",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/agecalculator/",
+      "image": "./assets/images/age-calculator.jpg",
+      "show": false
+    },
+    {
+      "title": "Currency Converter",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/currencyconvertor/",
+      "image": "./assets/images/currency-converter.png",
+      "show": false
+    },
+    {
+      "title": "Digital Clock",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/digitalclock/",
+      "image": "./assets/images/digital-clock.jpg",
+      "show": false
+    },
+    {
+      "title": "GitHub Profile Finder",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/githubprofilefinder/",
+      "image": "./assets/images/github-profile-finder.jpg",
+      "show": false
+    },
+    {
+      "title": "Image Resizer",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/imageresizer/",
+      "image": "./assets/images/image-resizer.jpg",
+      "show": false
+    },
+    {
+      "title": "Image Search Website",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/imagesearchwebsite/",
+      "image": "./assets/images/image-search-website.jpg",
+      "show": false
+    },
+    {
+      "title": "Meme Generator",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/memegenerator/",
+      "image": "./assets/images/meme-generator.png",
+      "show": false
+    },
+    {
+      "title": "Password Generator",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/passwordgenerator/",
+      "image": "./assets/images/password-generator.jpg",
+      "show": false
+    },
+    {
+      "title": "QR Generator",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/qrgenerator/",
+      "image": "./assets/images/qr-generator.jpg",
+      "show": false
+    },
+    {
+      "title": "Quotes",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/quotes/",
+      "image": "./assets/images/quotes.png",
+      "show": false
+    },
+    {
+      "title": "Screen Flash Light",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/screenflashlight/",
+      "image": "./assets/images/screen-flash-light.jpg",
+      "show": false
+    },
+    {
+      "title": "Sticky Notes",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/stickynotes/",
+      "image": "./assets/images/sticky-notes.jpg",
+      "show": false
+    },
+    {
+      "title": "Stopwatch",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/stopwatch/",
+      "image": "./assets/images/stopwatch.jpg",
+      "show": false
+    },
+    {
+      "title": "Todo App",
+      "category": "tools",
+      "url": "./Projects/Web Projects/tools/todoapp/",
+      "image": "./assets/images/todo-app.png",
+      "show": false
+    },
+    {
+      "title": "Birthday Wishing Website",
+      "category": "information",
+      "url": "./Projects/Web Projects/information/birthdaywishingwebsite/",
+      "image": "./assets/images/birthday-wishing-website.jpg",
+      "show": false
+    },
+    {
+      "title": "Jokes",
+      "category": "information",
+      "url": "./Projects/Web Projects/information/jokes/",
+      "image": "./assets/images/jokes.jpg",
+      "show": false
+    },
+    {
+      "title": "MoviePedia",
+      "category": "information",
+      "url": "./Projects/Web Projects/information/moviepedia/",
+      "image": "./assets/images/moviepedia.png",
+      "show": false
+    }
+  ]
+}

@@ -94,5 +94,143 @@
        
   }
 
+  .project-item.show {
+      transition: all 0.3s ease-in-out;
+      border-radius: 15px;
+      outline: var(--vegas-gold) solid 2px;
+      padding: 5px;
+  }
+ 
+  #project-frame {
+      width: 100%;
+      height: 0;
+      border: none; /* Remove the border */
+      border-radius: 0 0 12px 12px;
+      
+  }
 
+.browser-ui {
+  display: flex;
+  flex-direction: column;
+ /* Adjusted for max-w-4xl */
   
+  border: 2px solid var(--jet);; /* border-gray-200 */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--eerie-black-2);
+  transition: height 0.5s ease-in-out;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .browser-ui {
+    width: 100%; /* Adjust to full width for smaller screens */
+    
+  }
+}
+
+@media (max-width: 768px) {
+  .browser-ui {
+    flex-direction: column; /* Stack content vertically */
+    width: 100%; /* Full width */
+
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--smoky-black); /* bg-gray-100 */
+  border-bottom: 1px solid var(--jet); /* border-b border-gray-200 */
+  border-radius: 12px 12px 0 0;
+  padding: 8px;
+  gap: 10px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1; /* Ensure controls take available space */
+  margin-bottom: 0;
+}
+
+.icon-button {
+  width: 32px; /* w-8 */
+  height: 32px; /* h-8 */
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* Adjust icon size */
+  color: var(--white-2);
+  text-align: center; /* Ensure icons are centered */
+}
+
+.icon-button:hover {
+  background-color: var(--jet); /* hover:bg-gray-200 */
+}
+
+.icon-button.active {
+  background-color: var(--vegas-gold); /* Highlight active button */
+  color: black; /* Ensure contrast */
+  border: 1px solid var(--vegas-gold); /* Add border for visibility */
+}
+
+.icon-button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.url-input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid var(--jet); /* border-gray-200 */
+  border-radius: 4px;
+  width: 100%;
+  pointer-events: none; /* Make input non-editable */
+  background-color: var(--eerie-black-1);
+  color: var(--white-2);
+}
+
+.window-controls {
+  display: flex;
+  align-items: center;
+}
+
+.ghost {
+  background: none;
+  border: none;
+  color: var(--white-2);
+}
+
+.ghost:hover {
+  background-color: var(--jet); /* hover:bg-gray-200 */
+}
+
+.close:hover {
+  background-color: var(--bittersweet-shimmer); /* hover:bg-red-500 */
+  color: var(--white-1); /* hover:text-white */
+}
+
+.content {
+  flex-grow: 1;
+  background-color: var(--eerie-black-2);
+  overflow: auto;
+  color: var(--white-2);
+}
+
+h1 {
+  font-size: 24px; /* text-2xl */
+  font-weight: bold;
+  margin-bottom: 16px; /* mb-4 */
+}
+
+p {
+  margin-bottom: 16px; /* mb-4 */
+}
+.header button{
+  border-radius: 12px;
+}
