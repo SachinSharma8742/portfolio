@@ -141,13 +141,6 @@
       "show": false
     },
     {
-      "title": "Amazon",
-      "category": "web_applications",
-      "url": "Projects/amazon/amazon.html",
-      "image": "Projects/amazon/preview/image.png",
-      "show": false
-    },
-    {
       "title": "Distance Finder",
       "category": "web_applications",
       "url": "Projects/EPLQ/index.html",
@@ -222,13 +215,6 @@
       "category": "information",
       "url": "Projects/mainwebsite-main/Parallax_Website_15-05-23-main/index.html",
       "image": "https://www.figma.com/community/resource/222ff2ee-ddeb-4e09-ad27-21ef29c6b2fc/thumbnail",
-      "show": false
-    },
-    {
-      "title": "Gaming Website",
-      "category": "web_applications",
-      "url": "Projects/mainwebsite-main/index.html",
-      "image": "https://img.freepik.com/free-vector/game-night-landing-page-template_23-2151062992.jpg",
       "show": false
     },
     {
@@ -431,7 +417,7 @@
       "title": "MoviePedia",
       "category": "information",
       "url": "./Projects/Web Projects/information/moviepedia/",
-      "image": "./assets/images/moviepedia.png",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaeTpLA2T79vEhU7aUuJ0mPKzFjAEEPJEyyA&s",
       "show": false
     }
   ]
