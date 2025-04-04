@@ -1,4 +1,4 @@
-const projectItems = document.querySelectorAll('.project-item');
+const projectList = document.querySelector('.project-list');
 const iframe = document.getElementById('project-frame');
 const browser = document.getElementById('browser-frame');
 const header = document.getElementById('browser-header');
@@ -50,7 +50,7 @@ function closeb() {
   if (document.fullscreenElement) {
     document.exitFullscreen();
   }
-  projectItems.forEach(p => p.classList.remove('show'));
+  document.querySelectorAll('.project-item').forEach(p => p.classList.remove('show'));
   compressFrame();
 }
 
@@ -82,16 +82,20 @@ function fullscreen() {
 }
 
 function expandFrame(url, projectName) {
+  const encodedProjectName = encodeURIComponent(projectName); // Encode the project name
   iframe.src = url;
-  const headerHeight = header.offsetHeight;
-  browser.style.height = "500px";
-  header.style.display = 'flex';
-  document.querySelector('.url-input').value = `https://${projectName}.in`;
+  browser.style.height = '500px'; // Ensure height is explicitly set
+  browser.style.transition = 'height 0.3s ease'; // Add smooth transition for better UX
+  header.style.display = 'flex'; // Ensure header is visible
+  document.querySelector('.url-input').value = `https://${encodedProjectName}.in`; // Use encoded project name
+  console.log('Frame expanded with URL:', url, 'Encoded Project Name:', encodedProjectName); // Debugging log
 }
 
 function compressFrame() {
-  browser.style.height = '0px';
-  header.style.display = 'none';
+  browser.style.height = '0px'; // Collapse the frame
+  browser.style.transition = 'height 0.3s ease'; // Add smooth transition for better UX
+  header.style.display = 'none'; // Hide the header
+  console.log('Frame compressed'); // Debugging log
 }
 
 function updateHistory(url) {
@@ -124,25 +128,70 @@ function reload() {
   iframe.contentWindow.location.reload();
 }
 
-projectItems.forEach(item => {
-  item.addEventListener('click', (e) => {
+function handleProjectClick(li) {
+  const url = li.getAttribute('data-url');
+  const projectName = li.querySelector('.project-title')?.textContent?.trim() || 'Unknown Project';
+  const encodedProjectName = encodeURIComponent(projectName); // Encode the project name
+  if (li.classList.contains('show')) {
+    li.classList.remove('show');
+    compressFrame();
+  } else {
+    document.querySelectorAll('.project-item').forEach(item => item.classList.remove('show'));
+    li.classList.add('show');
+    expandFrame(url, encodedProjectName); // Pass encoded project name
+    updateHistory(url);
+
+    // Scroll to the top
+    window.scrollTo({ top: 200, behavior: 'smooth' });
+
+    // Move the clicked project to the top of the list
+    projectList.prepend(li);
+  }
+}
+
+// Delegate click events to the parent element
+projectList.addEventListener('click', (e) => {
+  const item = e.target.closest('.project-item');
+  if (item) {
     e.preventDefault();
-    if (item.classList.contains('show')) {
-      item.classList.remove('show');
-      compressFrame();
-    } else {
-      projectItems.forEach(p => p.classList.remove('show'));
-      item.classList.add('show');
-      const url = item.dataset.url;
-      const projectName = item.querySelector('.project-title').textContent.replace(/\s+/g, '').toLowerCase();
-      expandFrame(url, projectName);
-      updateHistory(url);
-    }
-  });
+    handleProjectClick(item);
+  }
 });
 
-if (projectItems.length > 0) {
-  projectItems[0].click();
+fetch('./assets/json/project.json')
+  .then(response => response.json())
+  .then(data => {
+    // Randomize the order of projects
+    data.projects = data.projects.sort(() => Math.random() - 0.5);
+
+    let projectItemsHTML = ''; // Accumulate all <li> elements as a single string
+
+    data.projects.forEach(project => {
+      projectItemsHTML += `
+        <li class="project-item active ${project.show ? 'show' : ''}" 
+            data-filter-item 
+            data-category="${project.category}" 
+            data-url="${project.url}">
+            <a href="#">
+                <figure class="project-img">
+                    <div class="project-item-icon-box">
+                        <i class="fa-regular fa-eye"></i>
+                    </div>
+                    <img src="${project.image}" alt="${project.title}" loading="lazy">
+                </figure>
+                <h3 class="project-title">${project.title}</h3>
+                <p class="project-category">${project.category}</p>
+            </a>
+        </li>
+      `;
+    });
+
+    projectList.innerHTML = projectItemsHTML; // Set all <li> elements at once
+  })
+  .catch(error => console.error('Error loading project data:', error));
+
+if (document.querySelectorAll('.project-item').length > 0) {
+  document.querySelectorAll('.project-item')[0].click();
 }
 
 document.querySelector('.fa-arrow-left').addEventListener('click', () => navigateHistory('back'));
