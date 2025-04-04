@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.image{
+    display: none;
+}
+.prev{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -90%);
+}
+.next{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -90%);
+}
+a{
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+}

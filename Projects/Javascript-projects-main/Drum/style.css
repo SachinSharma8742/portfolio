@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+button{
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    margin: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(51, 114, 153);
+    color: white;
+    transition: 0.2s all;
+}
+
+.running{
+    transform: scale(1.2);
+    background-color: black;
+}
