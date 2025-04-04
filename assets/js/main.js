@@ -158,7 +158,7 @@ projectList.addEventListener('click', (e) => {
   }
 });
 
-fetch('./assets/json/project.json')
+fetch('assets/json/project.json')
   .then(response => response.json())
   .then(data => {
     // Randomize the order of projects
