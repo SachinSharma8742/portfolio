@@ -234,189 +234,189 @@
     {
       "title": "Budget App",
       "category": "web_applications",
-      "url": "./Projects/Web Projects/webapps/budgetwebapp",
+      "url": "./Projects/Web Projects/webapps/budgetwebapp/index.html",
       "image": "./assets/images/project-1.jpg",
       "show": false
     },
     {
       "title": "Calculator",
       "category": "web_applications",
-      "url": "./Projects/Web Projects/webapps/calculator",
+      "url": "./Projects/Web Projects/webapps/calculator/index.html",
       "image": "./assets/images/project-10.png",
       "show": false
     },
     {
       "title": "Weather App",
       "category": "web_applications",
-      "url": "./Projects/Web Projects/webapps/weatherapp",
+      "url": "./Projects/Web Projects/webapps/weatherapp/index.html",
       "image": "./assets/images/project-11.png",
       "show": false
     },
     {
       "title": "Coin Toss",
       "category": "games",
-      "url": "./Projects/Web Projects/games/cointossweb",
+      "url": "./Projects/Web Projects/games/cointossweb/index.html",
       "image": "./assets/images/project-12.png",
       "show": false
     },
     {
       "title": "Dice Game",
       "category": "games",
-      "url": "./Projects/Web Projects/games/dicegame/",
+      "url": "./Projects/Web Projects/games/dicegame/index.html",
       "image": "./assets/images/project-13.png",
       "show": false
     },
     {
       "title": "Number Guessing Game",
       "category": "games",
-      "url": "./Projects/Web Projects/games/numberguessinggame/",
+      "url": "./Projects/Web Projects/games/numberguessinggame/index.html",
       "image": "./assets/images/project-14.png",
       "show": false
     },
     {
       "title": "Quiz",
       "category": "games",
-      "url": "./Projects/Web Projects/games/quizgame",
+      "url": "./Projects/Web Projects/games/quizgame/index.html",
       "image": "./assets/images/project-15.png",
       "show": false
     },
     {
       "title": "Rock Paper Scissors",
       "category": "games",
-      "url": "./Projects/Web Projects/games/rockpaperscissorsgame",
+      "url": "./Projects/Web Projects/games/rockpaperscissorsgame/index.html",
       "image": "./assets/images/project-16.png",
       "show": false
     },
     {
       "title": "Snake Game",
       "category": "games",
-      "url": "./Projects/Web Projects/games/snakegame/",
+      "url": "./Projects/Web Projects/games/snakegame/index.html",
       "image": "./assets/images/project-17.png",
       "show": false
     },
     {
       "title": "Tic Tac Toe",
       "category": "games",
-      "url": "./Projects/Web Projects/games/tictactoe/",
+      "url": "./Projects/Web Projects/games/tictactoe/index.html",
       "image": "./assets/images/project-18.png",
       "show": false
     },
     {
       "title": "Age Calculator",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/agecalculator/",
+      "url": "./Projects/Web Projects/tools/agecalculator/index.html",
       "image": "./assets/images/age-calculator.jpg",
       "show": false
     },
     {
       "title": "Currency Converter",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/currencyconvertor/",
+      "url": "./Projects/Web Projects/tools/currencyconvertor/index.html",
       "image": "./assets/images/currency-converter.png",
       "show": false
     },
     {
       "title": "Digital Clock",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/digitalclock/",
+      "url": "./Projects/Web Projects/tools/digitalclock/index.html",
       "image": "./assets/images/digital-clock.jpg",
       "show": false
     },
     {
       "title": "GitHub Profile Finder",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/githubprofilefinder/",
+      "url": "./Projects/Web Projects/tools/githubprofilefinder/index.html",
       "image": "./assets/images/github-profile-finder.jpg",
       "show": false
     },
     {
       "title": "Image Resizer",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/imageresizer/",
+      "url": "./Projects/Web Projects/tools/imageresizer/index.html",
       "image": "./assets/images/image-resizer.jpg",
       "show": false
     },
     {
       "title": "Image Search Website",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/imagesearchwebsite/",
+      "url": "./Projects/Web Projects/tools/imagesearchwebsite/index.html",
       "image": "./assets/images/image-search-website.jpg",
       "show": false
     },
     {
       "title": "Meme Generator",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/memegenerator/",
+      "url": "./Projects/Web Projects/tools/memegenerator/index.html",
       "image": "./assets/images/meme-generator.png",
       "show": false
     },
     {
       "title": "Password Generator",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/passwordgenerator/",
+      "url": "./Projects/Web Projects/tools/passwordgenerator/index.html",
       "image": "./assets/images/password-generator.jpg",
       "show": false
     },
     {
       "title": "QR Generator",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/qrgenerator/",
+      "url": "./Projects/Web Projects/tools/qrgenerator/index.html",
       "image": "./assets/images/qr-generator.jpg",
       "show": false
     },
     {
       "title": "Quotes",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/quotes/",
+      "url": "./Projects/Web Projects/tools/quotes/index.html",
       "image": "./assets/images/quotes.png",
       "show": false
     },
     {
       "title": "Screen Flash Light",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/screenflashlight/",
+      "url": "./Projects/Web Projects/tools/screenflashlight/index.html",
       "image": "./assets/images/screen-flash-light.jpg",
       "show": false
     },
     {
       "title": "Sticky Notes",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/stickynotes/",
+      "url": "./Projects/Web Projects/tools/stickynotes/index.html",
       "image": "./assets/images/sticky-notes.jpg",
       "show": false
     },
     {
       "title": "Stopwatch",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/stopwatch/",
+      "url": "./Projects/Web Projects/tools/stopwatch/index.html",
       "image": "./assets/images/stopwatch.jpg",
       "show": false
     },
     {
       "title": "Todo App",
       "category": "tools",
-      "url": "./Projects/Web Projects/tools/todoapp/",
+      "url": "./Projects/Web Projects/tools/todoapp/index.html",
       "image": "./assets/images/todo-app.png",
       "show": false
     },
     {
       "title": "Birthday Wishing Website",
       "category": "information",
-      "url": "./Projects/Web Projects/information/birthdaywishingwebsite/",
+      "url": "./Projects/Web Projects/information/birthdaywishingwebsite/index.html",
       "image": "./assets/images/birthday-wishing-website.jpg",
       "show": false
     },
     {
       "title": "Jokes",
       "category": "information",
-      "url": "./Projects/Web Projects/information/jokes/",
+      "url": "./Projects/Web Projects/information/jokes/index.html",
       "image": "./assets/images/jokes.jpg",
       "show": false
     },
     {
       "title": "MoviePedia",
       "category": "information",
-      "url": "./Projects/Web Projects/information/moviepedia/",
+      "url": "./Projects/Web Projects/information/moviepedia/index.html",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaeTpLA2T79vEhU7aUuJ0mPKzFjAEEPJEyyA&s",
       "show": false
     }
