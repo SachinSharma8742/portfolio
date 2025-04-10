@@ -87,7 +87,7 @@
     {
       "title": "Digital Clock",
       "category": "tools",
-      "url": "Projects/tools/DigitalClock/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/digitalclock/",
       "image": "assets/images/digital-clock.jpg",
       "show": false
     },
@@ -227,182 +227,182 @@
     {
       "title": "Budget App",
       "category": "web_applications",
-      "url": "Projects/webapps/BudgetWebApp/index.html",
+      "url": "https://appsweb.netlify.app/webapps/budgetwebapp/",
       "image": "assets/images/project-1.jpg",
       "show": false
     },
     {
       "title": "Calculator",
       "category": "web_applications",
-      "url": "Projects/webapps/Calculator/index.html",
+      "url": "https://appsweb.netlify.app/webapps/calculator/",
       "image": "assets/images/project-10.png",
       "show": false
     },
     {
       "title": "Weather App",
       "category": "web_applications",
-      "url": "Projects/webapps/WeatherApp/index.html",
+      "url": "https://appsweb.netlify.app/webapps/weatherapp/",
       "image": "assets/images/project-11.png",
       "show": false
     },
     {
       "title": "Coin Toss",
       "category": "games",
-      "url": "Projects/Games/CoinTossWeb/index.html",
+      "url": "https://gamesby.netlify.app/games/cointossweb/",
       "image": "assets/images/project-12.png",
       "show": false
     },
     {
       "title": "Dice Game",
       "category": "games",
-      "url": "Projects/Games/DiceGame/index.html",
+      "url": "https://gamesby.netlify.app/games/dicegame/",
       "image": "assets/images/project-13.png",
       "show": false
     },
     {
       "title": "Number Guessing Game",
       "category": "games",
-      "url": "Projects/Games/NumberGuessingGame/index.html",
+      "url": "https://gamesby.netlify.app/games/numberguessinggame/",
       "image": "assets/images/project-14.png",
       "show": false
     },
     {
       "title": "Quiz",
       "category": "games",
-      "url": "Projects/Games/QuizGame/index.html",
+      "url": "https://gamesby.netlify.app/games/quizgame/",
       "image": "assets/images/project-15.png",
       "show": false
     },
     {
       "title": "Rock Paper Scissors",
       "category": "games",
-      "url": "Projects/Games/RockPaperScissorsGame/index.html",
+      "url": "https://gamesby.netlify.app/games/rockpaperscissorsgame/",
       "image": "assets/images/project-16.png",
       "show": false
     },
     {
       "title": "Snake Game",
       "category": "games",
-      "url": "Projects/Games/SnakeGame/index.html",
+      "url": "https://gamesby.netlify.app/games/snakegame/",
       "image": "assets/images/project-17.png",
       "show": false
     },
     {
       "title": "Tic Tac Toe",
       "category": "games",
-      "url": "Projects/Games/TicTacToe/index.html",
+      "url": "https://gamesby.netlify.app/games/tictactoe/",
       "image": "assets/images/project-18.png",
       "show": false
     },
     {
       "title": "Age Calculator",
       "category": "tools",
-      "url": "Projects/tools/AgeCalculator/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/agecalculator/",
       "image": "assets/images/age-calculator.jpg",
       "show": false
     },
     {
       "title": "Currency Converter",
       "category": "tools",
-      "url": "Projects/tools/CurrencyConverter/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/currencyconverter/",
       "image": "assets/images/currency-converter.png",
       "show": false
     },
     {
       "title": "GitHub Profile Finder",
       "category": "tools",
-      "url": "Projects/tools/GithubProfileFinder/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/githubprofilefinder/",
       "image": "assets/images/github-profile-finder.jpg",
       "show": false
     },
     {
       "title": "Image Resizer",
       "category": "tools",
-      "url": "Projects/tools/ImageResizer/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/imageresizer/",
       "image": "assets/images/image-resizer.jpg",
       "show": false
     },
     {
       "title": "Image Search Website",
       "category": "tools",
-      "url": "Projects/tools/ImageSearchWebsite/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/imagesearchwebsite/",
       "image": "assets/images/image-search-website.jpg",
       "show": false
     },
     {
       "title": "Meme Generator",
       "category": "tools",
-      "url": "Projects/tools/MemeGenerator/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/memegenerator/",
       "image": "assets/images/meme-generator.png",
       "show": false
     },
     {
       "title": "Password Generator",
       "category": "tools",
-      "url": "Projects/tools/PasswordGenerator/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/passwordgenerator/",
       "image": "assets/images/password-generator.jpg",
       "show": false
     },
     {
       "title": "QR Generator",
       "category": "tools",
-      "url": "Projects/tools/QRGenerator/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/qrgenerator/",
       "image": "assets/images/qr-generator.jpg",
       "show": false
     },
     {
       "title": "Quotes",
       "category": "tools",
-      "url": "Projects/tools/Quotes/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/quotes/",
       "image": "assets/images/quotes.png",
       "show": false
     },
     {
       "title": "Screen Flash Light",
       "category": "tools",
-      "url": "Projects/tools/ScreenFlashLight/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/screenflashlight/",
       "image": "assets/images/screen-flash-light.jpg",
       "show": false
     },
     {
       "title": "Sticky Notes",
       "category": "tools",
-      "url": "Projects/tools/StickyNotes/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/stickynotes/",
       "image": "assets/images/sticky-notes.jpg",
       "show": false
     },
     {
       "title": "Stopwatch",
       "category": "tools",
-      "url": "Projects/tools/Stopwatch/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/stopwatch/",
       "image": "assets/images/stopwatch.jpg",
       "show": false
     },
     {
       "title": "Todo App",
       "category": "tools",
-      "url": "Projects/tools/TodoApp/index.html",
+      "url": "https://toolsonweb.netlify.app/tools/todoapp/",
       "image": "assets/images/todo-app.png",
       "show": false
     },
     {
       "title": "Birthday Wishing Website",
       "category": "information",
-      "url": "Projects/Information/BirthdayWishingWebsite/index.html",
+      "url": "https://information-handel.netlify.app/information/birthdaywishingwebsite/",
       "image": "assets/images/birthday-wishing-website.jpg",
       "show": false
     },
     {
       "title": "Jokes",
       "category": "information",
-      "url": "Projects/Information/Jokes/index.html",
+      "url": "https://information-handel.netlify.app/information/jokes/",
       "image": "assets/images/jokes.jpg",
       "show": false
     },
     {
       "title": "MoviePedia",
       "category": "information",
-      "url": "Projects/Information/MoviePedia/index.html",
+      "url": "https://information-handel.netlify.app/information/moviepedia/",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaeTpLA2T79vEhU7aUuJ0mPKzFjAEEPJEyyA&s",
       "show": false
     }
