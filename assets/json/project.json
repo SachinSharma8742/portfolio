@@ -248,49 +248,49 @@
     {
       "title": "Coin Toss",
       "category": "games",
-      "url": "https://gamesby.netlify.app/games/cointossweb/",
+      "url": "https://gamesby.netlify.app/games%20/cointossweb/",
       "image": "assets/images/project-12.png",
       "show": false
     },
     {
       "title": "Dice Game",
       "category": "games",
-      "url": "https://gamesby.netlify.app/games/dicegame/",
+      "url": "https://gamesby.netlify.app/games%20/dicegame/",
       "image": "assets/images/project-13.png",
       "show": false
     },
     {
       "title": "Number Guessing Game",
       "category": "games",
-      "url": "https://gamesby.netlify.app/games/numberguessinggame/",
+      "url": "https://gamesby.netlify.app/games%20/numberguessinggame/",
       "image": "assets/images/project-14.png",
       "show": false
     },
     {
       "title": "Quiz",
       "category": "games",
-      "url": "https://gamesby.netlify.app/games/quizgame/",
+      "url": "https://gamesby.netlify.app/games%20/quizgame/",
       "image": "assets/images/project-15.png",
       "show": false
     },
     {
       "title": "Rock Paper Scissors",
       "category": "games",
-      "url": "https://gamesby.netlify.app/games/rockpaperscissorsgame/",
+      "url": "https://gamesby.netlify.app/games%20/rockpaperscissorsgame/",
       "image": "assets/images/project-16.png",
       "show": false
     },
     {
       "title": "Snake Game",
       "category": "games",
-      "url": "https://gamesby.netlify.app/games/snakegame/",
+      "url": "https://gamesby.netlify.app/games%20/snakegame/",
       "image": "assets/images/project-17.png",
       "show": false
     },
     {
       "title": "Tic Tac Toe",
       "category": "games",
-      "url": "https://gamesby.netlify.app/games/tictactoe/",
+      "url": "https://gamesby.netlify.app/games%20/tictactoe/",
       "image": "assets/images/project-18.png",
       "show": false
     },
