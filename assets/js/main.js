@@ -81,14 +81,13 @@ function fullscreen() {
   }
 }
 
-function expandFrame(url, projectName) {
-  const encodedProjectName = encodeURIComponent(projectName); // Encode the project name
+function expandFrame(url) {
   iframe.src = url;
   browser.style.height = '500px'; // Ensure height is explicitly set
   browser.style.transition = 'height 0.3s ease'; // Add smooth transition for better UX
   header.style.display = 'flex'; // Ensure header is visible
-  document.querySelector('.url-input').value = `https://${encodedProjectName}.in`; // Use encoded project name
-  console.log('Frame expanded with URL:', url, 'Encoded Project Name:', encodedProjectName); // Debugging log
+  document.querySelector('.url-input').value = url; // Set the current URL directly
+  console.log('Frame expanded with URL:', url); // Debugging log
 }
 
 function compressFrame() {
@@ -114,7 +113,18 @@ function navigateHistory(direction) {
     historyIndex++;
   }
   if (history[historyIndex]) {
-    expandFrame(history[historyIndex]);
+    const currentUrl = history[historyIndex];
+    expandFrame(currentUrl); // Expand the frame with the current URL
+    document.querySelector('.url-input').value = currentUrl; // Update the URL input field
+
+    // Remove 'show' class from all project items
+    document.querySelectorAll('.project-item').forEach(item => item.classList.remove('show'));
+
+    // Add 'show' class to the current project item
+    const currentItem = document.querySelector(`.project-item[data-url="${currentUrl}"]`);
+    if (currentItem) {
+      currentItem.classList.add('show');
+    }
   }
   updateNavigationButtons();
 }
@@ -131,14 +141,13 @@ function reload() {
 function handleProjectClick(li) {
   const url = li.getAttribute('data-url');
   const projectName = li.querySelector('.project-title')?.textContent?.trim() || 'Unknown Project';
-  const encodedProjectName = encodeURIComponent(projectName); // Encode the project name
   if (li.classList.contains('show')) {
     li.classList.remove('show');
     compressFrame();
   } else {
     document.querySelectorAll('.project-item').forEach(item => item.classList.remove('show'));
     li.classList.add('show');
-    expandFrame(url, encodedProjectName); // Pass encoded project name
+    expandFrame(url); // Removed encoded project name as it's not used
     updateHistory(url);
 
     // Scroll to the top

@@ -1,5 +1,15 @@
 'use strict';
 
+document.addEventListener("DOMContentLoaded", () => {
+  const mainElement = document.querySelector("main");
+  const loader = document.getElementById("mainloader");
+  mainElement.style.opacity = "0"; // Hide the main element initially
+  setTimeout(() => {
+    mainElement.style.opacity = "1"; // Show the main element after 1 second
+    loader.style.display = "none"; // Hide the loader
+  }, 1000);
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   if (window.matchMedia("(max-width: 768px)").matches) {
     const skills = document.querySelectorAll('.skills');
@@ -50,6 +60,33 @@ document.addEventListener('DOMContentLoaded', function () {
 // Block right-click context menu
 document.addEventListener('contextmenu', function(event) {
   event.preventDefault();
+});
+
+//Save last vidited section
+document.addEventListener('DOMContentLoaded', function () {
+  const sections = document.querySelectorAll('[data-page]');
+  const navLinks = document.querySelectorAll('[data-nav-link]');
+
+  // Load the last visited section from localStorage
+  const lastVisited = localStorage.getItem('lastVisitedSection');
+  if (lastVisited) {
+    sections.forEach(section => section.classList.remove('active'));
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    const targetSection = document.querySelector(`[data-page="${lastVisited}"]`);
+    const targetLink = Array.from(navLinks).find(link => link.textContent.toLowerCase() === lastVisited);
+
+    if (targetSection) targetSection.classList.add('active');
+    if (targetLink) targetLink.classList.add('active');
+  }
+
+  // Save the current section to localStorage on navigation
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      const sectionName = this.textContent.toLowerCase();
+      localStorage.setItem('lastVisitedSection', sectionName);
+    });
+  });
 });
 
 // Disable specific key combinations
@@ -744,11 +781,14 @@ function showbot() {
       // Switch icons
       showIcon.style.display = "none";
       hideIcon.style.display = "inline-block";
-      // Scroll to the top of the page smoothly
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+
+      // Scroll to the top of the page smoothly only if not during page load
+     
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      
     }
   });
 
