@@ -183,32 +183,54 @@ function initBackToTop() {
 // ==================== Avatar Animation ====================
 function initAvatarAnimation() {
   const borderRadiusList = [
+    // Your existing values
     "64% 36% 71% 29% / 30% 30% 70% 70%",
     "30% 70% 50% 50% / 50% 30% 70% 50%",
     "40% 60% 60% 40% / 40% 60% 60% 40%",
     "20% 80% 70% 30% / 60% 40% 40% 60%",
     "64% 36% 71% 29% / 30% 30% 70% 70%",
     "64% 36% 33% 67% / 65% 30% 70% 35%",
-    "64% 36% 33% 67% / 65% 83% 17% 35%"
-  ];
+    "64% 36% 33% 67% / 65% 83% 17% 35%",
+    "55% 45% 55% 45% / 60% 40% 60% 40%",
+    "70% 30% 60% 40% / 50% 50% 50% 50%",
+    "25% 75% 25% 75% / 40% 60% 40% 60%",
+    "80% 20% 60% 40% / 30% 70% 30% 70%",
+    "45% 55% 65% 35% / 55% 45% 55% 45%",
+    "60% 40% 30% 70% / 70% 30% 60% 40%",
+    "33% 67% 44% 56% / 62% 38% 72% 28%",
+    "75% 25% 65% 35% / 45% 55% 45% 55%",
+    "50% 50% 30% 70% / 60% 40% 60% 40%",
+    "62% 38% 52% 48% / 45% 55% 45% 55%",
+    "28% 72% 39% 61% / 64% 36% 74% 26%",
+    "85% 15% 55% 45% / 35% 65% 35% 65%",
+    "47% 53% 63% 37% / 57% 43% 57% 43%",
+    "38% 62% 42% 58% / 68% 32% 78% 22%",
+    "53% 47% 58% 42% / 49% 51% 49% 51%"
+];
 
-  const applyRandomBorderRadius = () => {
-    const randomIndex = Math.floor(Math.random() * borderRadiusList.length);
-    document.querySelector(".avatar-box").style.borderRadius = borderRadiusList[randomIndex];
-  };
+const applyRandomBorderRadius = () => {
+  const randomIndex = Math.floor(Math.random() * borderRadiusList.length);
+  document.querySelector(".avatar-box").style.borderRadius = borderRadiusList[randomIndex];
+  document.querySelector(".avatar-backdrop").style.borderRadius = borderRadiusList[randomIndex2];
+};
 
-  const applyRotation = () => {
-    const randomAngle = Math.floor(Math.random() * 360);
-    const avatarBox = document.querySelector(".avatar-box");
-    const avatar = document.getElementById("avatar");
-    
-    avatarBox.style.transform = `rotate(${randomAngle}deg)`;
-    avatar.style.transform = `rotate(-${randomAngle}deg)`;
-    applyRandomBorderRadius();
-  };
+const applyRotation = () => {
+  const randomAngle = Math.floor(Math.random() * 360);
+  const randomAngle2 = Math.floor(Math.random() * 360);
+  const avatarBox = document.querySelector(".avatar-box");
+  const avatarBackdrop = document.querySelector(".avatar-backdrop");
+  const avatar = document.getElementById("avatar");
+  
+  avatarBox.style.transform = `rotate(${randomAngle}deg)`;
+  avatarBackdrop.style.transform = `rotate(-${randomAngle}deg)`;
+  avatar.style.transform = `rotate(-${randomAngle}deg)`;
+  applyRandomBorderRadius();
+};
 
   setInterval(applyRandomBorderRadius, 3000);
+  setInterval(applyRotation, 1000); // Rotate slightly less frequently
   applyRotation(); // Initial rotation
+  applyRandomBorderRadius(); // Initial border radius
 }
 
 // ==================== Skills Observer ====================

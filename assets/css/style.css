@@ -404,6 +404,7 @@ main {
   border-radius: 50%;
   overflow: hidden;
   transition: border-radius 2.5s ease-in-out, transform 1s ease-in-out;
+
 }
 
 .avatar-box:active , .avatar-box:hover{
@@ -413,14 +414,36 @@ main {
   
 }
 
+.avatar-backdrop {
+  position: absolute;
+  top: -0px;
+  left: -0px;
+  right: -0px;
+  bottom: -0px;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.602); /* Using your existing gradient */
+  border-radius: 50%; /* Match the avatar box */
+  transition: all 1.5s ease-in-out;
+  opacity: 0.7; /* Make it slightly transparent */
+}
+
 .avatar-container {
+  position: relative;
+  display: inline-block;
+  z-index: 1; /* Ensure the container stacks above the backdrop */
   display: flex;
   align-items: center;
   justify-content: center;
   -webkit-transform: scale(1.2); -ms-transform: scale(1.2); transform: scale(1.2); 
 }
 
+.avatar-box {
+  position: relative; /* Needed for z-index to work */
+  z-index: 2; /* Higher than backdrop */
+}
+
 #avatar {
+  object-fit: cover; 
   transition: transform 1s ease-in-out;
 }
 
