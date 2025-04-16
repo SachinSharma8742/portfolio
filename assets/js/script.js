@@ -26,7 +26,27 @@ document.addEventListener("DOMContentLoaded", () => {
   initFileExplorer();
   initChatBot();
   loadSocialLinks();
+  loadlastvisit();
 });
+ //  ====================  Load the last visited section  ==================== 
+function loadlastvisit() {
+  // Load the last visited section from localStorage
+  const lastVisited = localStorage.getItem('lastVisitedSection');
+  if (lastVisited) {
+    const sections = document.querySelectorAll('[data-page]');
+    const navLinks = document.querySelectorAll('[data-nav-link]');
+    
+    sections.forEach(section => section.classList.remove('active'));
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    const targetSection = document.querySelector(`[data-page="${lastVisited}"]`);
+    const targetLink = Array.from(navLinks).find(link => link.textContent.toLowerCase() === lastVisited);
+
+    if (targetSection) targetSection.classList.add('active');
+    if (targetLink) targetLink.classList.add('active');
+  }
+}
+
 
 // ==================== Touch Handlers ====================
 function initTouchHandlers() {
@@ -208,27 +228,28 @@ function initAvatarAnimation() {
     "53% 47% 58% 42% / 49% 51% 49% 51%"
 ];
 
-const applyRandomBorderRadius = () => {
-  const randomIndex = Math.floor(Math.random() * borderRadiusList.length);
-  document.querySelector(".avatar-box").style.borderRadius = borderRadiusList[randomIndex];
-  document.querySelector(".avatar-backdrop").style.borderRadius = borderRadiusList[randomIndex2];
-};
+  const applyRandomBorderRadius = () => {
+    const randomIndex = Math.floor(Math.random() * borderRadiusList.length);
+    const randomIndex2 = Math.floor(Math.random() * borderRadiusList.length);
+    document.querySelector(".avatar-box").style.borderRadius = borderRadiusList[randomIndex];
+    document.querySelector(".avatar-backdrop").style.borderRadius = borderRadiusList[randomIndex2];
+  };
 
-const applyRotation = () => {
-  const randomAngle = Math.floor(Math.random() * 360);
-  const randomAngle2 = Math.floor(Math.random() * 360);
-  const avatarBox = document.querySelector(".avatar-box");
-  const avatarBackdrop = document.querySelector(".avatar-backdrop");
-  const avatar = document.getElementById("avatar");
-  
-  avatarBox.style.transform = `rotate(${randomAngle}deg)`;
-  avatarBackdrop.style.transform = `rotate(-${randomAngle}deg)`;
-  avatar.style.transform = `rotate(-${randomAngle}deg)`;
-  applyRandomBorderRadius();
-};
+  const applyRotation = () => {
+    const randomAngle = Math.floor(Math.random() * 360);
+    const randomAngle2 = Math.floor(Math.random() * 360);
+    const avatarBox = document.querySelector(".avatar-box");
+    const avatarBackdrop = document.querySelector(".avatar-backdrop");
+    const avatar = document.getElementById("avatar");
+    
+    avatarBox.style.transform = `rotate(${randomAngle}deg)`;
+    avatarBackdrop.style.transform = `rotate(-${randomAngle}deg)`;
+    avatar.style.transform = `rotate(-${randomAngle}deg)`;
+    applyRandomBorderRadius();
+  };
 
   setInterval(applyRandomBorderRadius, 3000);
-  setInterval(applyRotation, 1000); // Rotate slightly less frequently
+  setInterval(applyRotation, 5000); // Rotate slightly less frequently
   applyRotation(); // Initial rotation
   applyRandomBorderRadius(); // Initial border radius
 }

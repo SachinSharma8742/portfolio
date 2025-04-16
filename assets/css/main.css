@@ -222,15 +222,7 @@
   color: var(--white-2);
 }
 
-h1 {
-  font-size: 24px; /* text-2xl */
-  font-weight: bold;
-  margin-bottom: 16px; /* mb-4 */
-}
 
-p {
-  margin-bottom: 16px; /* mb-4 */
-}
 .header button{
   border-radius: 12px;
  
@@ -339,10 +331,11 @@ p {
   animation-delay: 0.4s;
 }
 .mainloader {
-    position: sticky;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 94px;
     height: 136px;
 }
+
