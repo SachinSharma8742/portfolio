@@ -11,42 +11,79 @@ document.addEventListener("DOMContentLoaded", () => {
   loader.style.display = "none";
 
   // Initialize all components
-  initTouchHandlers();
-  initNavigation();
-  initSearch();
-  initBackToTop();
-  initAvatarAnimation();
-  initSkillsObserver();
-  initTypewriter();
-  initSidebar();
-  initCustomSelect();
-  initContactForm();
-  initPageNavigation();
-  initCountdown();
-  initFileExplorer();
-  initChatBot();
-  loadSocialLinks();
-  loadlastvisit();
+  initUniversalComponents(); // Combined universal components
+  initAvatarAnimation(); // universal
+  initPageNavigation(); // universal 
+  loadlastvisit(); // universal 
 });
- //  ====================  Load the last visited section  ==================== 
-function loadlastvisit() {
-  // Load the last visited section from localStorage
+
+// ==================== Initialize Universal Components ====================
+function initUniversalComponents() {
+  // Navigation
+  const sections = document.querySelectorAll('[data-page]');
+  const navLinks = document.querySelectorAll('[data-nav-link]');
   const lastVisited = localStorage.getItem('lastVisitedSection');
+
   if (lastVisited) {
-    const sections = document.querySelectorAll('[data-page]');
-    const navLinks = document.querySelectorAll('[data-nav-link]');
-    
     sections.forEach(section => section.classList.remove('active'));
     navLinks.forEach(link => link.classList.remove('active'));
 
     const targetSection = document.querySelector(`[data-page="${lastVisited}"]`);
-    const targetLink = Array.from(navLinks).find(link => link.textContent.toLowerCase() === lastVisited);
+    const targetLink = [...navLinks].find(link => link.textContent.toLowerCase() === lastVisited);
 
     if (targetSection) targetSection.classList.add('active');
     if (targetLink) targetLink.classList.add('active');
   }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const sectionName = this.textContent.toLowerCase();
+      localStorage.setItem('lastVisitedSection', sectionName);
+    });
+  });
+
+  // Sidebar Toggle
+  const sidebar = document.querySelector("[data-sidebar]");
+  const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+  sidebarBtn?.addEventListener("click", () => sidebar.classList.toggle("active"));
+
+  // Custom Select
+  const select = document.querySelector("[data-select]");
+  const selectItems = document.querySelectorAll("[data-select-item]");
+  const selectValue = document.querySelector("[data-selecct-value]");
+  const filterBtn = document.querySelectorAll("[data-filter-btn]");
+
+  select?.addEventListener("click", () => select.classList.toggle("active"));
+
+  selectItems.forEach(item => {
+    item.addEventListener("click", function() {
+      const selectedValue = this.innerText.toLowerCase();
+      selectValue.innerText = this.innerText;
+      select.classList.toggle("active");
+      filterProjects(selectedValue);
+    });
+  });
+
+  let lastClickedBtn = filterBtn[0];
+  filterBtn.forEach(btn => {
+    btn.addEventListener("click", function() {
+      const selectedValue = this.innerText.toLowerCase();
+      selectValue.innerText = this.innerText;
+      filterProjects(selectedValue);
+
+      lastClickedBtn.classList.remove("active");
+      this.classList.add("active");
+      lastClickedBtn = this;
+    });
+  });
 }
 
+function filterProjects(category) {
+  document.querySelectorAll('.project-item').forEach(item => {
+    const itemCategory = item.getAttribute('data-category');
+    item.style.display = (category === 'all' || itemCategory === category) ? '' : 'none';
+  });
+}
 
 // ==================== Touch Handlers ====================
 function initTouchHandlers() {
@@ -87,7 +124,7 @@ document.querySelectorAll('*').forEach(el => {
 });
 
 // Disable specific key combinations
-document.addEventListener('keydown', e => {
+document.addEventListener('keydown', function(event) {
   const blockedCombos = [
     { ctrlKey: true, key: 's' },  // Ctrl+S
     { ctrlKey: true, key: 'u' },  // Ctrl+U
@@ -112,35 +149,14 @@ document.addEventListener('keydown', e => {
     { shiftKey: true, key: 'PrintScreen' } // Shift+PrintScreen
   ];
 
-  if (blockedCombos.some(combo => Object.keys(combo).every(k => e[k] === combo[k]))) {
-    e.preventDefault();
+  for (let combo of blockedCombos) {
+    let match = Object.keys(combo).every(k => event[k] === combo[k]);
+    if (match) {
+      event.preventDefault();
+      return;
+    }
   }
 });
-
-// ==================== Navigation ====================
-function initNavigation() {
-  const sections = document.querySelectorAll('[data-page]');
-  const navLinks = document.querySelectorAll('[data-nav-link]');
-  const lastVisited = localStorage.getItem('lastVisitedSection');
-
-  if (lastVisited) {
-    sections.forEach(section => section.classList.remove('active'));
-    navLinks.forEach(link => link.classList.remove('active'));
-
-    const targetSection = document.querySelector(`[data-page="${lastVisited}"]`);
-    const targetLink = [...navLinks].find(link => link.textContent.toLowerCase() === lastVisited);
-
-    if (targetSection) targetSection.classList.add('active');
-    if (targetLink) targetLink.classList.add('active');
-  }
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      const sectionName = this.textContent.toLowerCase();
-      localStorage.setItem('lastVisitedSection', sectionName);
-    });
-  });
-}
 
 // ==================== Search Functionality ====================
 function initSearch() {
@@ -180,25 +196,28 @@ function initSearch() {
 }
 
 // ==================== Back to Top Button ====================
-function initBackToTop() {
-  const mybutton = document.getElementById("goToTopBtn");
-  
-  const scrollFunction = () => {
+var mybutton = document.getElementById("goToTopBtn");
+function scrollFunction() {
+  document.addEventListener('scroll', function() {
     const scrollTopButton = document.querySelector('.back-to-top');
-    scrollTopButton?.classList.toggle('active', window.scrollY > 500);
-  };
+    if (window.scrollY > 500) {
+        scrollTopButton.classList.add('active');
+        scrollTopButton.style.display = 'block';
+    } else {
+        scrollTopButton.classList.remove('active');
+    }
+  });
+}
 
-  const scrollToTop = () => {
-    const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-    if (currentPosition > 0) {
+function scrollToTop() {
+  var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+  if (currentPosition > 0) {
       window.requestAnimationFrame(scrollToTop);
       window.scrollTo(0, currentPosition - currentPosition / 10);
-    }
-  };
-
+  }
+}
   window.addEventListener('scroll', scrollFunction);
   mybutton.addEventListener('click', scrollToTop);
-}
 
 // ==================== Avatar Animation ====================
 function initAvatarAnimation() {
@@ -331,55 +350,6 @@ function initTypewriter() {
   type();
 }
 
-// ==================== Sidebar Toggle ====================
-function initSidebar() {
-  const sidebar = document.querySelector("[data-sidebar]");
-  const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-  
-  const elementToggleFunc = elem => elem.classList.toggle("active");
-  
-  sidebarBtn?.addEventListener("click", () => elementToggleFunc(sidebar));
-}
-
-// ==================== Custom Select ====================
-function initCustomSelect() {
-  const select = document.querySelector("[data-select]");
-  const selectItems = document.querySelectorAll("[data-select-item]");
-  const selectValue = document.querySelector("[data-selecct-value]");
-  const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-  select?.addEventListener("click", () => select.classList.toggle("active"));
-
-  selectItems.forEach(item => {
-    item.addEventListener("click", function() {
-      const selectedValue = this.innerText.toLowerCase();
-      selectValue.innerText = this.innerText;
-      select.classList.toggle("active");
-      filterProjects(selectedValue);
-    });
-  });
-
-  let lastClickedBtn = filterBtn[0];
-  filterBtn.forEach(btn => {
-    btn.addEventListener("click", function() {
-      const selectedValue = this.innerText.toLowerCase();
-      selectValue.innerText = this.innerText;
-      filterProjects(selectedValue);
-
-      lastClickedBtn.classList.remove("active");
-      this.classList.add("active");
-      lastClickedBtn = this;
-    });
-  });
-}
-
-function filterProjects(category) {
-  document.querySelectorAll('.project-item').forEach(item => {
-    const itemCategory = item.getAttribute('data-category');
-    item.style.display = (category === 'all' || itemCategory === category) ? '' : 'none';
-  });
-}
-
 // ==================== Contact Form ====================
 function initContactForm() {
   const form = document.querySelector("[data-form]");
@@ -400,10 +370,40 @@ function initPageNavigation() {
   const navigationLinks = document.querySelectorAll("[data-nav-link]");
   const pages = document.querySelectorAll("[data-page]");
 
-  const loadPageScript = pageName => {
-    const script = document.createElement('script');
-    script.src = `js/${pageName}.js`;
-    document.body.appendChild(script);
+  const initializePageFunctions = pageName => {
+    switch (pageName) {
+      case 'home':
+        if (!window.homeInitialized) {
+          initTouchHandlers();
+          initTypewriter();
+          initCountdown();
+          loadSocialLinks();
+          window.homeInitialized = true;
+        }
+        break;
+      case 'project':
+        if (!window.projectInitialized) {
+          initSearch();
+          initFileExplorer();
+          loadProjects();
+          window.projectInitialized = true;
+        }
+        break;
+      case 'about':
+        if (!window.aboutInitialized) {
+          initSkillsObserver();
+          window.aboutInitialized = true;
+        }
+        break;
+      case 'contact':
+        if (!window.contactInitialized) {
+          initContactForm();
+          window.contactInitialized = true;
+        }
+        break;
+      default:
+        console.warn(`No initialization functions defined for page: ${pageName}`);
+    }
   };
 
   const navigateToPage = pageName => {
@@ -411,22 +411,22 @@ function initPageNavigation() {
       const isActive = pageName === page.dataset.page;
       page.classList.toggle("active", isActive);
       navigationLinks[i]?.classList.toggle("active", isActive);
-      
+
       if (isActive) {
-        loadPageScript(pageName);
-        window.scrollTo(0, 0);
+        initializePageFunctions(pageName); // Initialize functions only when the section is active
+        window.scrollTo(0, 0); // Scroll to the top of the page
       }
     });
   };
 
-  navigationLinks.forEach((link, i) => {
+  navigationLinks.forEach(link => {
     link.addEventListener("click", () => {
       const pageName = link.innerHTML.toLowerCase();
       navigateToPage(pageName);
     });
   });
 
-  // Load the initial page script
+  // Load the initial page script and initialize functions
   if (pages.length > 0) navigateToPage(pages[0].dataset.page);
 }
 
@@ -665,57 +665,81 @@ function initFileExplorer() {
 }
 
 // ==================== Chat Bot ====================
-function initChatBot() {
-  const botbox = document.querySelector('.botbox');
+let botsAreVisible = false; // Tracks if bots are shown
+let userToggled = false;    // Tracks if toggle button was clicked
+
+function showbot() {
+  userToggled = true; // Mark that toggle was manually triggered
+
+  const botboxes = document.querySelectorAll('.botbox');
   const button = document.getElementById('botToggle');
-  const showIcon = button?.querySelector('.fa-robot');
-  const hideIcon = button?.querySelector('.fa-times');
-  const ibot = document.getElementById('ibot');
+  const showIcon = button.querySelector('.fa-robot');
+  const hideIcon = button.querySelector('.fa-times');
 
-  if (!botbox || !button) return;
+  button.style.pointerEvents = 'none'; // Disable button briefly
 
-  const toggleBot = () => {
-    button.style.pointerEvents = 'none';
-    const isExpanding = botbox.style.display !== "flex";
+  if (botsAreVisible) {
+    botboxes.forEach(botbox => {
+      const ibot = botbox.querySelector('.ibot') || botbox.querySelector('#ibot');
 
-    if (isExpanding) {
-      // Show the botbox
-      botbox.classList.add('expand');
+      if (userToggled) {
+        botbox.classList.remove('expand');
+        botbox.classList.add('collapsed');
+      }
+
+      botbox.style.display = "block";
+      botbox.style.width = "40px";
+      botbox.style.maxHeight = '5px';
+      setTimeout(() => {
+        botbox.style.position = "absolute";
+      }, userToggled ? 500 : 0);
+      setTimeout(() => {
+        botbox.classList.remove('collapsed');
+        botbox.style.backgroundColor = "black";
+      }, userToggled ? 1000 : 0);
+
+      if (ibot) ibot.style.opacity = "0";
+    });
+
+    showIcon.style.display = "inline-block";
+    hideIcon.style.display = "none";
+    botsAreVisible = false;
+  } else {
+    botboxes.forEach(botbox => {
+      const ibot = botbox.querySelector('.ibot') || botbox.querySelector('#ibot');
+
+      if (userToggled) {
+        botbox.classList.remove('collapsed');
+        botbox.classList.add('expand');
+      }
+
       botbox.style.display = "flex";
       botbox.style.width = "100%";
       botbox.style.height = '50vh';
       botbox.style.maxHeight = '350px';
       botbox.style.position = "relative";
-      
-      setTimeout(() => ibot.style.opacity = "1", 1000);
-      showIcon.style.display = "none";
-      hideIcon.style.display = "inline-block";
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      // Hide the botbox
-      botbox.classList.remove('expand');
-      botbox.classList.add('collapsed');
-      botbox.style.width = "40px";
-      botbox.style.maxHeight = '5px';
 
-      setTimeout(() => {
-        botbox.style.position = "absolute";
-      }, 500);
-      
-      setTimeout(() => {
-        botbox.classList.remove('collapsed');
-        botbox.style.backgroundColor = "black";
-      }, 1000);
-      
-      showIcon.style.display = "inline-block";
-      hideIcon.style.display = "none";
-      ibot.style.opacity = "0";
+      if (ibot && userToggled) {
+        setTimeout(() => {
+          ibot.style.opacity = "1";
+        }, 1000);
+      }
+    });
+
+    showIcon.style.display = "none";
+    hideIcon.style.display = "inline-block";
+
+    if (userToggled) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    setTimeout(() => button.style.pointerEvents = 'auto', 1000);
-  };
+    botsAreVisible = true;
+  }
 
-  button.addEventListener('click', toggleBot);
+  setTimeout(() => {
+    button.style.pointerEvents = 'auto';
+    userToggled = false; // Reset flag after toggle is handled
+  }, 1000);
 }
 
 // ==================== Social Links Loader ====================
@@ -790,11 +814,5 @@ function showsearchbar() {
   expcontainer.style.display = "none";
 }
 
+window.onscroll = function() {scrollFunction()};
 
-// Initialize on window load
-window.addEventListener('load', () => {
-  document.querySelectorAll('.botbox').forEach(box => {
-    box.style.display = "block";
-  });
-  loadProjects();
-});
