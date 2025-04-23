@@ -11,79 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
   loader.style.display = "none";
 
   // Initialize all components
-  initUniversalComponents(); // Combined universal components
-  initAvatarAnimation(); // universal
+  initNavigation(); // universal 
+  initSidebar(); // universal
+  initCustomSelect(); // universal
+  initAvatarAnimation();// univesal
   initPageNavigation(); // universal 
   loadlastvisit(); // universal 
 });
-
-// ==================== Initialize Universal Components ====================
-function initUniversalComponents() {
-  // Navigation
-  const sections = document.querySelectorAll('[data-page]');
-  const navLinks = document.querySelectorAll('[data-nav-link]');
+ //  ====================  Load the last visited section  ==================== 
+function loadlastvisit() {
+  // Load the last visited section from localStorage
   const lastVisited = localStorage.getItem('lastVisitedSection');
-
   if (lastVisited) {
+    const sections = document.querySelectorAll('[data-page]');
+    const navLinks = document.querySelectorAll('[data-nav-link]');
+    
     sections.forEach(section => section.classList.remove('active'));
     navLinks.forEach(link => link.classList.remove('active'));
 
     const targetSection = document.querySelector(`[data-page="${lastVisited}"]`);
-    const targetLink = [...navLinks].find(link => link.textContent.toLowerCase() === lastVisited);
+    const targetLink = Array.from(navLinks).find(link => link.textContent.toLowerCase() === lastVisited);
 
     if (targetSection) targetSection.classList.add('active');
     if (targetLink) targetLink.classList.add('active');
   }
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      const sectionName = this.textContent.toLowerCase();
-      localStorage.setItem('lastVisitedSection', sectionName);
-    });
-  });
-
-  // Sidebar Toggle
-  const sidebar = document.querySelector("[data-sidebar]");
-  const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-  sidebarBtn?.addEventListener("click", () => sidebar.classList.toggle("active"));
-
-  // Custom Select
-  const select = document.querySelector("[data-select]");
-  const selectItems = document.querySelectorAll("[data-select-item]");
-  const selectValue = document.querySelector("[data-selecct-value]");
-  const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-  select?.addEventListener("click", () => select.classList.toggle("active"));
-
-  selectItems.forEach(item => {
-    item.addEventListener("click", function() {
-      const selectedValue = this.innerText.toLowerCase();
-      selectValue.innerText = this.innerText;
-      select.classList.toggle("active");
-      filterProjects(selectedValue);
-    });
-  });
-
-  let lastClickedBtn = filterBtn[0];
-  filterBtn.forEach(btn => {
-    btn.addEventListener("click", function() {
-      const selectedValue = this.innerText.toLowerCase();
-      selectValue.innerText = this.innerText;
-      filterProjects(selectedValue);
-
-      lastClickedBtn.classList.remove("active");
-      this.classList.add("active");
-      lastClickedBtn = this;
-    });
-  });
 }
 
-function filterProjects(category) {
-  document.querySelectorAll('.project-item').forEach(item => {
-    const itemCategory = item.getAttribute('data-category');
-    item.style.display = (category === 'all' || itemCategory === category) ? '' : 'none';
-  });
-}
 
 // ==================== Touch Handlers ====================
 function initTouchHandlers() {
@@ -124,7 +77,7 @@ document.querySelectorAll('*').forEach(el => {
 });
 
 // Disable specific key combinations
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', e => {
   const blockedCombos = [
     { ctrlKey: true, key: 's' },  // Ctrl+S
     { ctrlKey: true, key: 'u' },  // Ctrl+U
@@ -149,14 +102,35 @@ document.addEventListener('keydown', function(event) {
     { shiftKey: true, key: 'PrintScreen' } // Shift+PrintScreen
   ];
 
-  for (let combo of blockedCombos) {
-    let match = Object.keys(combo).every(k => event[k] === combo[k]);
-    if (match) {
-      event.preventDefault();
-      return;
-    }
+  if (blockedCombos.some(combo => Object.keys(combo).every(k => e[k] === combo[k]))) {
+    e.preventDefault();
   }
 });
+
+// ==================== Navigation ====================
+function initNavigation() {
+  const sections = document.querySelectorAll('[data-page]');
+  const navLinks = document.querySelectorAll('[data-nav-link]');
+  const lastVisited = localStorage.getItem('lastVisitedSection');
+
+  if (lastVisited) {
+    sections.forEach(section => section.classList.remove('active'));
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    const targetSection = document.querySelector(`[data-page="${lastVisited}"]`);
+    const targetLink = [...navLinks].find(link => link.textContent.toLowerCase() === lastVisited);
+
+    if (targetSection) targetSection.classList.add('active');
+    if (targetLink) targetLink.classList.add('active');
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const sectionName = this.textContent.toLowerCase();
+      localStorage.setItem('lastVisitedSection', sectionName);
+    });
+  });
+}
 
 // ==================== Search Functionality ====================
 function initSearch() {
@@ -348,6 +322,55 @@ function initTypewriter() {
   };
 
   type();
+}
+
+// ==================== Sidebar Toggle ====================
+function initSidebar() {
+  const sidebar = document.querySelector("[data-sidebar]");
+  const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+  
+  const elementToggleFunc = elem => elem.classList.toggle("active");
+  
+  sidebarBtn?.addEventListener("click", () => elementToggleFunc(sidebar));
+}
+
+// ==================== Custom Select ====================
+function initCustomSelect() {
+  const select = document.querySelector("[data-select]");
+  const selectItems = document.querySelectorAll("[data-select-item]");
+  const selectValue = document.querySelector("[data-selecct-value]");
+  const filterBtn = document.querySelectorAll("[data-filter-btn]");
+
+  select?.addEventListener("click", () => select.classList.toggle("active"));
+
+  selectItems.forEach(item => {
+    item.addEventListener("click", function() {
+      const selectedValue = this.innerText.toLowerCase();
+      selectValue.innerText = this.innerText;
+      select.classList.toggle("active");
+      filterProjects(selectedValue);
+    });
+  });
+
+  let lastClickedBtn = filterBtn[0];
+  filterBtn.forEach(btn => {
+    btn.addEventListener("click", function() {
+      const selectedValue = this.innerText.toLowerCase();
+      selectValue.innerText = this.innerText;
+      filterProjects(selectedValue);
+
+      lastClickedBtn.classList.remove("active");
+      this.classList.add("active");
+      lastClickedBtn = this;
+    });
+  });
+}
+
+function filterProjects(category) {
+  document.querySelectorAll('.project-item').forEach(item => {
+    const itemCategory = item.getAttribute('data-category');
+    item.style.display = (category === 'all' || itemCategory === category) ? '' : 'none';
+  });
 }
 
 // ==================== Contact Form ====================
