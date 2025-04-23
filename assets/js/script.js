@@ -9,34 +9,47 @@ document.addEventListener("DOMContentLoaded", () => {
   // Immediately show content when DOM is ready (excluding images)
   mainElement.style.opacity = "1";
   loader.style.display = "none";
-  
+
   // Initialize all components
-  initNavigation(); // universal 
-  initSidebar(); // universal
-  initCustomSelect(); // universal
-  initAvatarAnimation();// univesal
   initPageNavigation(); // universal 
-  loadlastvisit(); // universal 
+  initNavLoad(); // universal 
+  initCustomSelect(); // universal
+  initDynamicFeatures(); // universal
+  initSidebar(); // universal
+  loadSocialLinks(); // universal
 });
- //  ====================  Load the last visited section  ==================== 
-function loadlastvisit() {
-  // Load the last visited section from localStorage
+
+// ==================== Navigation and Last Visit ====================
+function initNavLoad() {
+  const sections = document.querySelectorAll('[data-page]');
+  const navLinks = document.querySelectorAll('[data-nav-link]');
   const lastVisited = localStorage.getItem('lastVisitedSection');
+
   if (lastVisited) {
-    const sections = document.querySelectorAll('[data-page]');
-    const navLinks = document.querySelectorAll('[data-nav-link]');
-    
     sections.forEach(section => section.classList.remove('active'));
     navLinks.forEach(link => link.classList.remove('active'));
 
     const targetSection = document.querySelector(`[data-page="${lastVisited}"]`);
-    const targetLink = Array.from(navLinks).find(link => link.textContent.toLowerCase() === lastVisited);
+    const targetLink = [...navLinks].find(link => link.textContent.toLowerCase() === lastVisited);
 
     if (targetSection) targetSection.classList.add('active');
     if (targetLink) targetLink.classList.add('active');
   }
-}
 
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const sectionName = this.textContent.toLowerCase();
+      localStorage.setItem('lastVisitedSection', sectionName);
+
+      sections.forEach(section => section.classList.remove('active'));
+      navLinks.forEach(navLink => navLink.classList.remove('active'));
+
+      const clickedSection = document.querySelector(`[data-page="${sectionName}"]`);
+      if (clickedSection) clickedSection.classList.add('active');
+      this.classList.add('active');
+    });
+  });
+}
 
 // ==================== Touch Handlers ====================
 function initTouchHandlers() {
@@ -77,7 +90,7 @@ document.querySelectorAll('*').forEach(el => {
 });
 
 // Disable specific key combinations
-document.addEventListener('keydown', e => {
+document.addEventListener('keydown', function(event) {
   const blockedCombos = [
     { ctrlKey: true, key: 's' },  // Ctrl+S
     { ctrlKey: true, key: 'u' },  // Ctrl+U
@@ -102,35 +115,14 @@ document.addEventListener('keydown', e => {
     { shiftKey: true, key: 'PrintScreen' } // Shift+PrintScreen
   ];
 
-  if (blockedCombos.some(combo => Object.keys(combo).every(k => e[k] === combo[k]))) {
-    e.preventDefault();
+  for (let combo of blockedCombos) {
+    let match = Object.keys(combo).every(k => event[k] === combo[k]);
+    if (match) {
+      event.preventDefault();
+      return;
+    }
   }
 });
-
-// ==================== Navigation ====================
-function initNavigation() {
-  const sections = document.querySelectorAll('[data-page]');
-  const navLinks = document.querySelectorAll('[data-nav-link]');
-  const lastVisited = localStorage.getItem('lastVisitedSection');
-
-  if (lastVisited) {
-    sections.forEach(section => section.classList.remove('active'));
-    navLinks.forEach(link => link.classList.remove('active'));
-
-    const targetSection = document.querySelector(`[data-page="${lastVisited}"]`);
-    const targetLink = [...navLinks].find(link => link.textContent.toLowerCase() === lastVisited);
-
-    if (targetSection) targetSection.classList.add('active');
-    if (targetLink) targetLink.classList.add('active');
-  }
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      const sectionName = this.textContent.toLowerCase();
-      localStorage.setItem('lastVisitedSection', sectionName);
-    });
-  });
-}
 
 // ==================== Search Functionality ====================
 function initSearch() {
@@ -193,10 +185,10 @@ function scrollToTop() {
   window.addEventListener('scroll', scrollFunction);
   mybutton.addEventListener('click', scrollToTop);
 
-// ==================== Avatar Animation ====================
-function initAvatarAnimation() {
+// ==================== Dynamic Features ====================
+function initDynamicFeatures() {
+  // Avatar Animation
   const borderRadiusList = [
-    // Your existing values
     "64% 36% 71% 29% / 30% 30% 70% 70%",
     "30% 70% 50% 50% / 50% 30% 70% 50%",
     "40% 60% 60% 40% / 40% 60% 60% 40%",
@@ -219,7 +211,7 @@ function initAvatarAnimation() {
     "47% 53% 63% 37% / 57% 43% 57% 43%",
     "38% 62% 42% 58% / 68% 32% 78% 22%",
     "53% 47% 58% 42% / 49% 51% 49% 51%"
-];
+  ];
 
   const applyRandomBorderRadius = () => {
     const randomIndex = Math.floor(Math.random() * borderRadiusList.length);
@@ -242,9 +234,94 @@ function initAvatarAnimation() {
   };
 
   setInterval(applyRandomBorderRadius, 3000);
-  setInterval(applyRotation, 5000); // Rotate slightly less frequently
-  applyRotation(); // Initial rotation
-  applyRandomBorderRadius(); // Initial border radius
+  setInterval(applyRotation, 5000);
+  applyRotation();
+  applyRandomBorderRadius();
+
+  // Typewriter Effect
+  const sentences = [
+    "Web Developer.",
+    "Video Editor.",
+    "Professional Programmer.",
+    "Computer Engineer."
+  ];
+
+  const typewriterElement = document.getElementById('typewriter');
+  if (typewriterElement) {
+    const shuffle = array => {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    };
+
+    shuffle(sentences);
+
+    let sentenceIndex = 0;
+    let currentSentence = '';
+    let isDeleting = false;
+    const typeSpeed = 150;
+    const deleteSpeed = 75;
+    const delayBetweenSentences = 2000;
+
+    const type = () => {
+      const fullSentence = sentences[sentenceIndex];
+      
+      currentSentence = isDeleting 
+        ? fullSentence.substring(0, currentSentence.length - 1)
+        : fullSentence.substring(0, currentSentence.length + 1);
+      
+      typewriterElement.innerHTML = currentSentence + "<span>│</span>";
+
+      let speed = isDeleting ? deleteSpeed : typeSpeed;
+
+      if (!isDeleting && currentSentence === fullSentence) {
+        speed = delayBetweenSentences;
+        isDeleting = true;
+      } else if (isDeleting && currentSentence === '') {
+        isDeleting = false;
+        sentenceIndex = (sentenceIndex + 1) % sentences.length;
+        if (sentenceIndex === 0) shuffle(sentences);
+        speed = typeSpeed;
+      }
+
+      setTimeout(type, speed);
+    };
+
+    type();
+  }
+
+  // Social Links Loader
+  const socialList = document.querySelector(".social-list");
+  const loader = document.querySelector(".loader");
+  
+  if (socialList) {
+    const renderSocialLinks = data => {
+      socialList.innerHTML = data.socialLinks.map(link => `
+        <li class="social-item">
+          <a href="${link.linkUrl}" target="_blank" class="social-link">
+            <i class="fa-brands fa-${link.linkName.toLowerCase()}"></i>
+          </a>
+        </li>
+      `).join('');
+    };
+    
+    const fetchSocialLinks = async () => {
+      loader.style.display = "block";
+      try {
+        const response = await fetch("https://api.npoint.io/2a7f0442599f0a78a72a");
+        const data = await response.json();
+        loader.style.display = 'none';
+        socialList.style.display = "flex";
+        renderSocialLinks(data);
+      } catch (error) {
+        console.error('Error fetching social links:', error);
+        loader.style.display = 'none';
+      }
+    };
+    
+    fetchSocialLinks();
+  }
 }
 
 // ==================== Skills Observer ====================
@@ -267,61 +344,6 @@ function initSkillsObserver() {
   }, { threshold: 0.5 });
   
   observer.observe(skillSection);
-}
-
-// ==================== Typewriter Effect ====================
-function initTypewriter() {
-  const sentences = [
-    "Web Developer.",
-    "Video Editor.",
-    "Professional Programmer.",
-    "Computer Engineer."
-  ];
-
-  const typewriterElement = document.getElementById('typewriter');
-  if (!typewriterElement) return;
-
-  const shuffle = array => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  };
-
-  shuffle(sentences);
-
-  let sentenceIndex = 0;
-  let currentSentence = '';
-  let isDeleting = false;
-  const typeSpeed = 150;
-  const deleteSpeed = 75;
-  const delayBetweenSentences = 2000;
-
-  const type = () => {
-    const fullSentence = sentences[sentenceIndex];
-    
-    currentSentence = isDeleting 
-      ? fullSentence.substring(0, currentSentence.length - 1)
-      : fullSentence.substring(0, currentSentence.length + 1);
-    
-    typewriterElement.innerHTML = currentSentence + "<span>│</span>";
-
-    let speed = isDeleting ? deleteSpeed : typeSpeed;
-
-    if (!isDeleting && currentSentence === fullSentence) {
-      speed = delayBetweenSentences;
-      isDeleting = true;
-    } else if (isDeleting && currentSentence === '') {
-      isDeleting = false;
-      sentenceIndex = (sentenceIndex + 1) % sentences.length;
-      if (sentenceIndex === 0) shuffle(sentences);
-      speed = typeSpeed;
-    }
-
-    setTimeout(type, speed);
-  };
-
-  type();
 }
 
 // ==================== Sidebar Toggle ====================
@@ -398,9 +420,7 @@ function initPageNavigation() {
       case 'home':
         if (!window.homeInitialized) {
           initTouchHandlers();
-          initTypewriter();
           initCountdown();
-          loadSocialLinks();
           window.homeInitialized = true;
         }
         break;
@@ -450,7 +470,8 @@ function initPageNavigation() {
   });
 
   // Load the initial page script and initialize functions
-  if (pages.length > 0) navigateToPage(pages[0].dataset.page);
+  const lastVisited = localStorage.getItem('lastVisitedSection') || pages[0]?.dataset.page;
+  if (lastVisited) navigateToPage(lastVisited);
 }
 
 // ==================== Countdown Timer ====================
