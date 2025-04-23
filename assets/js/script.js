@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Immediately show content when DOM is ready (excluding images)
   mainElement.style.opacity = "1";
   loader.style.display = "none";
-
+  
   // Initialize all components
   initNavigation(); // universal 
   initSidebar(); // universal
