@@ -229,7 +229,7 @@ function initDynamicFeatures() {
     
     avatarBox.style.transform = `rotate(${randomAngle}deg)`;
     avatarBackdrop.style.transform = `rotate(-${randomAngle}deg)`;
-    avatar.style.transform = `rotate(-${randomAngle}deg)`;
+    avatar.style.transform = `translate(-50%, -50%) rotate(-${randomAngle}deg)`;
     applyRandomBorderRadius();
   };
 
