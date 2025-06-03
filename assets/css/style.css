@@ -1076,12 +1076,25 @@ text-align: center;
   display: block; 
   text-align: center; 
  } 
-  
-  
+
+  .loading-animation {
+      width: 200%;
+    }
+  .empty-state{
+    width: 200%;
+  }
 }
 
 
 @media (max-width: 768px) {
+
+    .loading-animation {
+      width: 100%;
+    }
+
+     .empty-state{
+    width: 100%;
+  }
 .skills.touch-active span {
   margin-top: 5px;
   font-size: small;
@@ -3207,7 +3220,6 @@ background-color: transparent;
     justify-content: center;
     padding: 2rem;
     text-align: center;
-    min-width: 200%;
     margin: 0 auto;
   }
 
@@ -3313,7 +3325,6 @@ background-color: transparent;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    width: 200%;
   }
 
   .loading-spinner {
@@ -4483,6 +4494,8 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .blog-banner-box { height: 230px; }
+
+  
 }
 
 
