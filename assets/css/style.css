@@ -4704,7 +4704,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .social-list { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 .navbar {
-  width: max-content;
+  width: 54.4%;
 }
 
   /**
