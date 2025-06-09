@@ -621,18 +621,17 @@ main {
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
-
 .navbar {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width:100%;
   background: hsla(240, 1%, 17%, 0.75);
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 20px 20px 0 0;
   -webkit-box-shadow: var(--shadow-2);
-          box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-2);
   z-index: 5;
   border: 1px solid var(--jet);
 }
@@ -642,15 +641,16 @@ main {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 10px;
 }
+
 .navbar-link{
   color: var(--light-gray);
   font-size: var(--fs-5);
@@ -674,9 +674,10 @@ main {
   transform: scale(1.1);
 }
 
-  .navbar-link.active { color: var(--orange-yellow-crayola);
-    text-shadow: 1px 1px 1px #FFE87C; }
- 
+.navbar-link.active { 
+  color: var(--orange-yellow-crayola);
+  text-shadow: 1px 1px 1px #FFE87C; 
+}
 
 
 
@@ -4289,7 +4290,6 @@ textarea.form-input::-webkit-resizer { display: none; }
    * NAVBAR
    */
 
-  .navbar-link { --fs-5: 15px; }
 
 
 
@@ -4442,22 +4442,95 @@ textarea.form-input::-webkit-resizer { display: none; }
     right: 0;
     width: -webkit-max-content;
     width: -moz-max-content;
-    width: max-content;
+    width: 54%;
     border-radius: 20px;
     padding: 0 20px;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
 
   .navbar-list {
     gap: 30px;
     padding: 0 20px;
   }
+  
 
-  .navbar-link { font-weight: var(--fw-500); }
+.navbar-link { 
+  font-weight: var(--fw-500); 
+  --fs-5: 15px; 
+}
+.nav-span{
+    display: block;
+  }
 
+   .navbar-link:hover,.navbar-link:focus { 
+    transition: all .4s ease-in-out;
+    z-index: 3;
+    color: black;
+  }
 
+    nav span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 100%;
+    background: linear-gradient(45deg, #c09731,var(--orange-yellow-crayola));
+    border-radius: 8px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease-in-out;
+    opacity: 0.1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: none;
+    z-index: -1;
+  }
 
+    @keyframes smoothHover {
+    0% { opacity: 0.1; }
+    100% { opacity: 0.5; }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    50% { transform: translateX(0); }
+    80% { transform: translateX(-5px); }
+  }
+
+    nav ul li:nth-child(1):hover~span {
+    left: 0px;
+    display: block;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    animation: bounce 0.6s ease-in-out,smoothHover .4s ease-in-out forwards;
+  }
+  nav ul li:nth-child(2):hover~span {
+    left: 19%;
+    width: 120px;
+    display: block;
+    animation: smoothHover .4s ease-in-out forwards;
+  }
+  nav ul li:nth-child(3):hover~span {
+    left: 38%;
+    width: 115px;
+    display: block;
+    animation: smoothHover .4s ease-in-out forwards;
+  }
+  .navbar ul li:nth-child(4):hover~span {
+    left: 57%;
+    width: 100px;
+    display: block;
+    animation: smoothHover .4s ease-in-out forwards;
+  }
+  nav ul li:nth-child(5):hover~span {
+    left: 72%;
+    width: 140px;
+    display: block;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    animation: bounce 0.6s ease-in-out,smoothHover .4s ease-in-out forwards;
+  }
   /**
    * ABOUT
    */
@@ -4630,107 +4703,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-
+.navbar {
+  width: max-content;
+}
 
   /**
      * RESUME
      */
-
+ 
   .timeline-text { max-width: 700px; }
 
-   .nav-span{
-    display: block;
-    }
-  .navbar-link:hover,.navbar-link:focus { 
-    transition: all .4s ease-in-out;
-    z-index: 3;
-    color: black;
-  }
-  nav span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 130px;
-    height: 100%;
-    background: -o-linear-gradient(45deg, #c09731,var(--orange-yellow-crayola));
-    background: linear-gradient(45deg, #c09731,var(--orange-yellow-crayola));
-    border-radius: 8px;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease-in-out;
-    
-    opacity: 0.1;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-   display: none;
-    z-index: -1;
-    
-  }
-
-  @keyframes smoothHover {
-    0% {
-      
-      opacity: 0.1;
-    }
-    100% {
-      
-      opacity: 0.5;
-    }
-  }
-
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    20% {
-      transform: translateX(-10px);
-    }
-    50% {
-      transform: translateX(0);
-    }
-    80% {
-      transform: translateX(-5px);
-    }
-  }
-
-  nav ul li:nth-child(1):hover~span {
-    left: 0px;
-    display: block;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    animation: bounce 0.6s ease-in-out,smoothHover .4s ease-in-out forwards;
-  }
-  
-  nav ul li:nth-child(2):hover~span {
-    left: 19%;
-    width: 120px;
-    display: block;
-    animation: smoothHover .4s ease-in-out forwards;
-  }
-  
-  nav ul li:nth-child(3):hover~span {
-    left: 38%;
-    width: 115px;
-    display: block;
-    animation: smoothHover .4s ease-in-out forwards;
-  }
-  
-  .navbar ul li:nth-child(4):hover~span {
-    left: 57%;
-    width: 100px;
-    display: block;
-    animation: smoothHover .4s ease-in-out forwards;
-  }
-  
-  nav ul li:nth-child(5):hover~span {
-    left: 72%;
-    width: 140px;
-    display: block;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    animation: bounce 0.6s ease-in-out,smoothHover .4s ease-in-out forwards;
-  }
-  
 
 }
 
