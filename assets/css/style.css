@@ -233,6 +233,9 @@ article.active {
   100% { opacity: 1; }
 }
 
+h1{
+  font-size: var(--fs-4);
+}
 .h2,
 .h3,
 .h4,
@@ -3546,12 +3549,7 @@ background: rgb(0, 0, 0);
       outline: 1px solid var(--icon-light);
     }
 
-    @media (max-width: 400px) {
-      .settings-panel.expanded {
-        width: calc(95vw - 40px);
-        max-width: 300px;
-      }
-    }
+   
 
     /* Toggle Button */
     .toggle-btn {
