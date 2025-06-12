@@ -1,5 +1,4 @@
 :root{
-  --card-color: var(--eerie-black-1);
   --pillar-size: 34px;
   --big-circle-r: 30px;
   --circle-r: 13px;
@@ -16,14 +15,14 @@
        /* Big Circle Cutout */ radial-gradient(
             circle at 100% 0%,
             transparent var(--big-circle-r),
-            var(--card-color) calc(var(--big-circle-r) + 1px)
+            var(--eerie-black-2) calc(var(--big-circle-r) + 1px)
           )
           0px var(--pillar-size) / calc(51.29% - var(--pillar-size)) 100% no-repeat
           no-repeat,
         /* Top Circle  */
           radial-gradient(
             circle closest-side,
-            var(--card-color) 100%,
+            var(--eerie-black-2) 100%,
             transparent calc(100% + 1px)
           )
           calc(49.89% - var(--circles-space)) 0 / var(--circle-d) var(--circle-d)
@@ -31,22 +30,22 @@
         /* Right Circle */
           radial-gradient(
             circle closest-side,
-             var(--card-color) 100%,
+             var(--eerie-black-2) 100%,
             transparent calc(100% + 1px)
           )
           100% var(--circles-space) / var(--circle-d) var(--circle-d) no-repeat
           no-repeat,
         /* Top Gap fill Pillar */
-          linear-gradient(0deg,  var(--card-color) 100%,  var(--card-color) 100%) 0px var(--circle-r) /
+          linear-gradient(0deg,  var(--eerie-black-2) 100%,  var(--eerie-black-2) 100%) 0px var(--circle-r) /
           calc(51.25% - var(--circles-space)) calc(100% - var(--circle-r)) no-repeat
           no-repeat,
         /* Right Gap fill Pillar */
-          linear-gradient(0deg,  var(--card-color) 100%,  var(--card-color) 100%) 0 var(--circles-space) /
+          linear-gradient(0deg,  var(--eerie-black-2) 100%,  var(--eerie-black-2) 100%) 0 var(--circles-space) /
           calc(100% - var(--circle-r)) 100% no-repeat no-repeat,
-        /* Top Circle Extend */ linear-gradient(0deg,  var(--card-color) 100%,  var(--card-color) 100%)
+        /* Top Circle Extend */ linear-gradient(0deg,  var(--eerie-black-2) 100%,  var(--eerie-black-2) 100%)
           0px 0px / calc(51.5% - var(--circle-extend-inset)) var(--circle-d)
           no-repeat no-repeat,
-        /* Right Circle Extend  */ linear-gradient(0deg,  var(--card-color) 100%,  var(--card-color) 100%)
+        /* Right Circle Extend  */ linear-gradient(0deg,  var(--eerie-black-2) 100%,  var(--eerie-black-2) 100%)
           100% var(--circle-extend-inset) / var(--circle-d) 100% no-repeat no-repeat;
     }
   }
@@ -58,14 +57,14 @@
            /* Big Circle Cutout */ radial-gradient(
                 circle at 100% 0%,
                 transparent var(--big-circle-r),
-                var(--card-color) calc(var(--big-circle-r) + 1px)
+                var(--eerie-black-2) calc(var(--big-circle-r) + 1px)
               )
               0px var(--pillar-size) / calc(51.79% - var(--pillar-size)) 100% no-repeat
               no-repeat,
             /* Top Circle  */
               radial-gradient(
                 circle closest-side,
-                var(--card-color) 100%,
+                var(--eerie-black-2) 100%,
                 transparent calc(100% + 1px)
               )
               calc(50.32% - var(--circles-space)) 0 / var(--circle-d) var(--circle-d)
@@ -73,22 +72,22 @@
             /* Right Circle */
               radial-gradient(
                 circle closest-side,
-                 var(--card-color) 100%,
+                 var(--eerie-black-2) 100%,
                 transparent calc(100% + 1px)
               )
               100% var(--circles-space) / var(--circle-d) var(--circle-d) no-repeat
               no-repeat,
             /* Right Gap fill Pillar */
-              linear-gradient(0deg,  var(--card-color) 100%,  var(--card-color) 100%) 0px var(--circle-r) /
+              linear-gradient(0deg,  var(--eerie-black-2) 100%,  var(--eerie-black-2) 100%) 0px var(--circle-r) /
               calc(51.75% - var(--circles-space)) calc(100% - var(--circle-r)) no-repeat
               no-repeat,
             /* Right Gap fill Pillar */
-              linear-gradient(0deg,  var(--card-color) 100%,  var(--card-color) 100%) 0 var(--circles-space) /
+              linear-gradient(0deg,  var(--eerie-black-2) 100%,  var(--eerie-black-2) 100%) 0 var(--circles-space) /
               calc(100% - var(--circle-r)) 100% no-repeat no-repeat,
-            /* Top Circle Extend */ linear-gradient(0deg,  var(--card-color) 100%,  var(--card-color) 100%)
+            /* Top Circle Extend */ linear-gradient(0deg,  var(--eerie-black-2) 100%,  var(--eerie-black-2) 100%)
               0px 0px / calc(51.8% - var(--circle-extend-inset)) var(--circle-d)
               no-repeat no-repeat,
-            /* Right Circle Extend  */ linear-gradient(0deg,  var(--card-color) 100%,  var(--card-color) 100%)
+            /* Right Circle Extend  */ linear-gradient(0deg,  var(--eerie-black-2) 100%,  var(--eerie-black-2) 100%)
               100% var(--circle-extend-inset) / var(--circle-d) 100% no-repeat no-repeat;
         }
        
@@ -336,3 +335,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+
+

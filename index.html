@@ -18,9 +18,11 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/root.css">
+  <link rel="stylesheet" href="./assets/css/style.css?v=1.0">
   <link rel="stylesheet" href="./assets/css/main.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  
  
   <!--
     - icon link
@@ -34,6 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body >
@@ -41,19 +44,37 @@
   <!--
     - #MAIN
   -->
-  <div style="position: sticky; top: 0; margin-top: -80px; z-index: 1001; width: min-content;" >
-  <div class="botcontainer">
-    <button class="bot_call"  onclick="showbot()" id="botToggle">
-      <div class="sign">
-      <i class="fa-solid fa-robot" style="transform: translateY(-2px);"></i>
-      <i class="fas fa-times" style="display: none; color: red;"></i>
+<div id="alert-container"></div>
+
+  <contol style="position: absolute; top: 0; display: none; flex-direction: column;" id="contol-container">
+    <div style="display: flex; flex-direction: row;">
+    <div class="settings-panel">
+      <button class="toggle-btn" aria-expanded="false" aria-label="Toggle settings panel" >
+        <span class="material-icons menu-icon">menu</span>
+        <span class="material-icons close-icon" style="display: none;">arrow_back</span>
+      </button>
+      
+      <div class="panel-icons">
+        <button class="icon-btn" aria-label="Chatbot" title="Chatbot Summon" id="botToggle" style="margin-left: 10px;">
+          <span class="material-icons">smart_toy</span>
+          <span class="material-icons">close</span>
+        </button>
+       
+       <button class="icon-btn" aria-label="Theme" title="Toggle theme" id="switch">
+  <span class="material-icons">light_mode</span> <!-- Modern light mode icon -->
+  <span class="material-icons">dark_mode</span> <!-- Modern dark mode icon -->
+</button>
+         <div class="verticle-seperator">|</div>
+         <div class="utility-icon" aria-label="WiFi" title="Ping strength" id="wifiToggle">
+          <span class="material-icons">Ping</span>
+        </div>
       </div>
-      <div class="text">Chatbot</div>
-    </button>
+    </div>
     <div id="curved-corner-topleft"></div>
   </div>
-  <div id="curved-corner-topleft"></div>
-</div>
+<div id="curved-corner-topleft"></div>
+</contol>
+
 <div class="mainloader" id="mainloader">
   <svg
   id="svg-global"
@@ -409,12 +430,12 @@
       <div class="sidebar-info">
 
         <div class="avatar-container">
-          <div class="avatar-backdrop"></div>
-          <figure class="avatar-box">
-            <img id="avatar" src="./assets/images/my-avatar.jpg" alt="Sachin Sharma">
-          </figure>
-        </div>
-        
+  <figure class="avatar-box">
+    <div class="avatar-depth">
+      <img id="avatar" src="./assets/images/my-avatar.jpg" alt="Sachin Sharma">
+    </div>
+  </figure>
+</div>
         <div class="info-content">
           <h1 class="name" title="Sachin Sharma ">Sachin Sharma</h1>
 
@@ -1455,8 +1476,11 @@
   <!--
     - custom js link
   -->
+  
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/script.js"></script>
+  
+  
 
 
   <!--
