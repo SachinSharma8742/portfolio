@@ -3393,6 +3393,12 @@ background-color: transparent;
   background: var(--vegas-gold);
   border-radius: 3px;
 }
+/* For screens less than 580px */
+@media (max-width: 580px) {
+  .botbox {
+    border-radius: 16px; /* Smaller border-radius for mobile */
+  }
+}
 .botbox.collapsed {
   animation: collapsed .7s linear;
   transform: translateY(-25px);
