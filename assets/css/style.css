@@ -657,6 +657,8 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+.about-text a {text-decoration: none; max-width: 170px;}
+
 a > button {
   background-color: var(--orange-yellow-crayola);
   color: #000000;
@@ -3584,7 +3586,7 @@ background: rgb(0, 0, 0);
 
     /* Icons Container */
     .panel-icons {
-      display: flex;
+      display: none;
       gap: 0.5rem;
       align-items: center;
       width: 100%;
