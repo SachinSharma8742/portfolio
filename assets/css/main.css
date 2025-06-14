@@ -339,3 +339,198 @@
 
 
 
+
+
+/* Responsive GitHub stats container */
+.github-stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto 2rem auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.github-stats-img {
+  width: 100%;
+  max-width: 600px;
+  min-width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06);
+  border: 1px solid #e0e0e0;
+  
+}
+
+/* For very large screens, center and limit width */
+@media (min-width: 900px) {
+  .github-stats-container {
+    max-width: 1000px;
+  }
+  .github-stats-img {
+    max-width: 1000px;
+  }
+}
+
+/* For extra large screens, allow even wider images */
+@media (min-width: 1400px) {
+  .github-stats-container {
+    max-width: 1200px;
+  }
+  .github-stats-img {
+    max-width: 1200px;
+  }
+}
+
+/* For small screens, ensure images are not too small */
+@media (max-width: 500px) {
+  .github-stats-container {
+    max-width: 98vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+  .github-stats-img {
+    max-width: 100vw;
+    min-width: 0;
+  }
+}
+
+.github-stats-section {
+  width: 100%;
+  margin: 2.5rem auto 2rem auto;
+  padding: 0;
+  max-width: 1200px;
+  text-align: center;
+}
+.github-stats-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--orange-yellow-crayola, #f5b700);
+  margin-bottom: 2.2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(255,255,255,0.08);
+  background: linear-gradient(90deg, var(--orange-yellow-crayola) 0%, var(--vegas-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.github-stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+.github-stats-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.github-stats-card {
+  background: var(--eerie-black-2, #232323);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+  border: 1.5px solid var(--vegas-gold, #f5b700);
+  padding: 1.2rem 1.2rem 0.7rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  min-width: 260px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+.github-stats-card.wide {
+  max-width: 1000px;
+  min-width: 260px;
+  width: 100%;
+}
+
+
+.github-stats-img {
+  width: 100%;
+  max-width: 450px;
+  min-width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06);
+}
+.github-stats-img.wide,
+.github-stats-card.wide .github-stats-img {
+  max-width: 900px;
+  min-width: 260px;
+  width: 100%;
+}
+.github-stats-label {
+  margin-top: 0.7rem;
+  font-size: 1.1rem;
+  color: var(--vegas-gold, #f5b700);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.5px;
+  justify-content: center;
+}
+.github-stats-label i {
+  color: var(--orange-yellow-crayola, #f5b700);
+  font-size: 1.2em;
+}
+@media (max-width: 900px) {
+  .github-stats-container {
+    max-width: 98vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+  .github-stats-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .github-stats-card,
+  .github-stats-card.wide {
+    max-width: 100vw;
+    min-width: 0;
+    padding: 0.7rem 0.3rem 0.5rem 0.3rem;
+  }
+  .github-stats-img,
+  .github-stats-card.wide .github-stats-img {
+    max-width: 98vw;
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  .github-stats-header {
+    font-size: 1.1rem;
+    gap: 0.4rem;
+  }
+
+  .github-stats-label {
+    font-size: 0.95rem;
+  }
+}

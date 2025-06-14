@@ -46,7 +46,7 @@
   -->
 <div id="alert-container"></div>
 
-  <contol style="position: absolute; top: 0; display: none; flex-direction: column;" id="contol-container">
+  <contol style="position: fixed; top: 0; display: none; flex-direction: column; z-index: 1000;" id="contol-container">
     <div style="display: flex; flex-direction: row;">
     <div class="settings-panel">
       <button class="toggle-btn" aria-expanded="false" aria-label="Toggle settings panel" >
@@ -1059,7 +1059,48 @@
             </li>
           </ul>
         </section>
-
+  <!-- GitHub Top Languages -->
+  <div class="github-stats-section">
+    <div class="github-stats-header">
+      
+      <span>GitHub Highlights</span>
+      
+    </div>
+    <div class="github-stats-container">
+      <div class="github-stats-row">
+        <div class="github-stats-card wide">
+          <img 
+            src="https://github-readme-streak-stats.herokuapp.com/?user=Sachinsharma8742&theme=highcontrast" 
+            alt="GitHub Streak" 
+            class="github-stats-img wide"
+          />
+          <div class="github-stats-label">
+            <i class="fa-solid fa-fire"></i> Streak
+          </div>
+        </div>
+        <div class="github-stats-card wide">
+          <img 
+            src="https://github-readme-activity-graph.vercel.app/graph?username=Sachinsharma8742&theme=high-contrast" 
+            alt="GitHub Contribution Graph" 
+            class="github-stats-img wide"
+          />
+          <div class="github-stats-label">
+            <i class="fa-solid fa-chart-line"></i> Contribution Graph
+          </div>
+        </div>
+        <div class="github-stats-card wide">
+          <img 
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sachinsharma8742&layout=compact&theme=highcontrast" 
+            alt="Top Languages" 
+            class="github-stats-img wide"
+          />
+          <div class="github-stats-label">
+            <i class="fa-solid fa-code"></i> Top Languages
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
       </article>
 
 

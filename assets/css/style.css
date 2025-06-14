@@ -364,7 +364,9 @@ main {
     inset 0 0 40px rgba(0, 0, 0, 0.2);
   background: var(--jet);
 }
-
+#typewriter span {
+  color: var(--white);
+}
 .avatar-depth {
   position: absolute;
   background-color: var(--vegas-gold);
