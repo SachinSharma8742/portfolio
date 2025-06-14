@@ -1757,6 +1757,7 @@ top: 20.2em;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 4px var(--jet);
           box-shadow: 0 0 0 4px var(--jet);
+  background: var(--orange-yellow-crayola);
 }
 
 .timeline-text {
