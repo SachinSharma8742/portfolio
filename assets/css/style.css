@@ -2820,6 +2820,7 @@ background-color: transparent;
   -webkit-transition: var(--transition-1);
   -o-transition: var(--transition-1);
   transition: var(--transition-1);
+
 }
 
 .blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
@@ -2886,7 +2887,7 @@ background-color: transparent;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: var(--shadow-4);
-      max-height: 350px;
+      max-height: max-content;
     }
     .blog-post-item.active {
       outline: 2px solid var(--orange-yellow-crayola);
@@ -3947,8 +3948,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #PORTFOLIO, BLOG 
    */
 
-  .project-img,
-  .blog-banner-box { height: auto; }
+  .project-img {height: auto; }
   
 }
 
