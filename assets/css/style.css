@@ -740,11 +740,7 @@ a > button:hover{
       -ms-transform: scale(1.1);
           transform: scale(1.1);
 }
-a > button:hover i {
-  -webkit-transform: translateX(3.5em) rotate(45deg) scale(1.1);
-      -ms-transform: translateX(3.5em) rotate(45deg) scale(1.1);
-          transform: translateX(3.5em) rotate(45deg) scale(1.1);
-}
+
 
 @keyframes fly-1 {
   0% {
@@ -774,11 +770,7 @@ a > button:hover i {
 }
 
 
-a > button:hover span{
-  animation: fly-1 0.3s forwards;
-  transition: all .3s ease-in-out;
-          
-}
+
 
 a > button:active {
   -webkit-transform: scale(0.95);
