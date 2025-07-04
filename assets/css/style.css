@@ -621,9 +621,6 @@ main {
   -webkit-transition:all .10s ease-in-out;
   -o-transition:all .10s ease-in-out;
   transition:all .10s ease-in-out;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: auto;
   margin: -15px;
   z-index: 4;
 }
@@ -1032,6 +1029,7 @@ text-transform: capitalize;
 .skills i{
   color: var(--black);
   transition: all .3s ease-in-out;
+  
 } 
 
 .skills span {
