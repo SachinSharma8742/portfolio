@@ -1,0 +1,22 @@
+{
+  "blogPosts": [
+    {
+      "alt": "Smart India Hackathon 2025 Finalist Ceremony",
+      "date": "2025-09-25",
+      "image": "./assets/images/sih/sih-2025-valedictory.jpeg",
+      "title": "Smart India Hackathon (SIH) 2025 Finalist",
+      "category": "Award",
+      "dateText": "September 25, 2025",
+      "message": "<div class='blog-content'><p>Proud to be selected as a <strong>Finalist at Smart India Hackathon (SIH) 2025 Prelims</strong> held at JECRC University!</p><ul><li><strong>High-Impact Problem Solving:</strong> Architected and developed a full-stack solution tackling complex national problem statements under intense time constraints.</li><li><strong>24-Hour Nonstop Sprint:</strong> Collaborated with an extraordinary multidisciplinary team through relentless brainstorming, coding, and debugging.</li><li><strong>Grand Stage Recognition:</strong> Honored on stage at the prestigious Valedictory Ceremony by distinguished dignitaries and judges.</li></ul><p>The energy, collaborative drive, and pressure testing throughout the hackathon pushed our engineering capabilities to new heights!</p></div><div class='blog-extended'><img class=\"blog-image\" src=\"./assets/images/sih/sih-2025-team.jpeg\" alt=\"SIH 2025 Team\"><h3>Behind the Scenes: 24-Hour Coding Marathon</h3><p>Here is an authentic peek into our team's workspace during the midnight crunch — laptops, chargers, code reviews, and pure determination:</p><video class=\"blog-video\" controls playsinline preload=\"metadata\" style=\"width: 100%; border-radius: 8px; margin: 1.5rem 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);\"><source src=\"./assets/images/sih/sih-2025-hackathon.mp4\" type=\"video/mp4\">Your browser does not support the video tag.</video><h3>Valedictory Honor & Stage Felicitation</h3><p>Receiving our certificates of excellence on the grand stage at the conclusion of SIH 2025 Prelims:</p><img class=\"blog-image\" src=\"./assets/images/sih/sih-2025-valedictory.jpeg\" alt=\"SIH 2025 Valedictory Ceremony\"><p>For in-depth details about my technical contributions, projects, and hackathon milestones</p></div>"
+    },
+    {
+      "alt": "Victory moment at Ju Rhythm go-karting",
+      "date": "2025-05-06",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx2vfcNEV8d_w1e44axfFil6eYwUHcgL5b13m3SP0GDOuCqJIAaxH8PZkXLYkob9E6Yfo&usqp=CAU",
+      "title": "Winning Ju Rhythm Go-Karting Championship",
+      "category": "Award",
+      "dateText": "May 6, 2025",
+      "message": "<div class='blog-content'><p>Defeated 30+ participants at Jaipur's biggest college fest!</p><ul><li><strong>Tactical Racing:</strong> Saved tires for final laps</li><li><strong>Precision Drifting:</strong> Nailed the decisive corner</li><li><strong>Underdog Win:</strong> From 5th to 1st position</li></ul><p>The crowd's roar at finish line was unforgettable!</p></div><div class='blog-extended'><img class=\"blog-image\" src=\"https://lh3.googleusercontent.com/pw/AP1GczPgGWR09w4TiYyaW_8M9LgCWTm6pIJflJZoUjlt_aygrcuCWhoEoXOhPJoCetAnXC4NHVIMnUCOh5iNlJQ7La35P99fS45zsP0JMOt6jwLvYLGRiFUCX-4jW5A5smKObQgAbT6IeitL2vx1Wzp3S2YKWQ=w2540-h1696-s-no?authuser=0\" alt=\"Go-Karting Trophy\"><h3>The Full Race Breakdown</h3><p>Ju Rhythm's track had three technical sections where most made mistakes. My strategy:</p><ol><li><strong>Qualifying:</strong> Purposely qualified mid-field to study leaders</li><li><strong>Lap 1-2:</strong> Conservative driving to preserve kart</li><li><strong>Final Lap:</strong> Pushed to 110% capacity</li></ol><p>The trophy now sits proudly on my shelf - first of many motorsport wins!</p></div>"
+    }
+  ]
+}

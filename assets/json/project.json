@@ -1,6 +1,46 @@
 {
   "projects": [
     {
+      "title": "Obliq Studio",
+      "category": "web_applications",
+      "url": "https://obliqco.com/",
+      "image": "assets/images/obliq-logo-1x1.png",
+      "show": false,
+      "featured": true
+    },
+    {
+      "title": "Khidki Tales",
+      "category": "web_applications",
+      "url": "https://www.khidkitales.in/",
+      "image": "assets/images/khidki.png",
+      "show": false,
+      "featured": true
+    },
+    {
+      "title": "Design Your India",
+      "category": "web_applications",
+      "url": "https://www.designyourindia.com/",
+      "image": "assets/images/design.png",
+      "show": false,
+      "featured": true
+    },
+    {
+      "title": "NS Marble",
+      "category": "web_applications",
+      "url": "https://ns-marbel.vercel.app/",
+      "image": "assets/images/ns.png",
+      "show": false,
+      "featured": true
+    },
+    {
+      "title": "Aapani Dukan",
+      "category": "web_applications",
+      "url": "https://obliqco.com/",
+      "image": "assets/images/ifb.png",
+      "show": false,
+      "featured": true
+    },
+    {
       "title": "Custom Cursor",
       "category": "web_applications",
       "url": "Projects/30days30submits-master/day-01/index.html",

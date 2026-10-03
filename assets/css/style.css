@@ -2908,15 +2908,16 @@ background-color: transparent;
     
 .blog-post-item.active .blog-text {
   opacity: 1;
+  max-height: 600px;
 }
 
-.blog-image {
+.blog-image, .blog-video {
   width: 100%;
   align-self: center;
   object-fit: cover;
   border-radius: 8px;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 1.2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 .blog-title {
